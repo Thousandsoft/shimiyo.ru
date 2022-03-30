@@ -1,0 +1,55 @@
+@font-face { 
+    font-family: ValueSansProBold;
+    src: url("fonts/ValueSansProBold/ValueSansProBold.eot");
+    src: url("fonts/ValueSansProBold/ValueSansProBold.eot?#iefix")format("embedded-opentype"),
+    url("fonts/ValueSansProBold/ValueSansProBold.woff") format("woff"),
+    url("fonts/ValueSansProBold/ValueSansProBold.ttf") format("truetype");
+    font-style: normal;
+    font-weight: 700;
+}
+/*MARK: HEADER*/
+
+.head{
+    background-color: #274646;
+    position: fixed;
+    left: 0;
+    top: 0;
+    right:0;
+    margin: 20px;
+    
+}
+.menu-button{
+    background-color: #274646;
+    display: inline-block;
+    padding-left: 52px;
+    cursor: pointer;
+    vertical-align:middle;
+    
+}
+.logo{
+    padding: 19px;
+    display: inline-block;
+    vertical-align:middle;
+    
+}
+.telephone-number{
+    color: #A0A0A0;
+    display: inline-block;
+    font-family: ValueSansProBold;
+    font-size: 14px;
+}
+.geolocation{
+    display: inline-block;
+    vertical-align:middle;
+    padding-left: 24px;
+}
+.geolocation img{
+    vertical-align:middle;
+}
+.address-label{
+    display: inline-block;
+    color: #FFE091;
+    font-size: 14px;
+    padding-left: 6px;
+}
+
