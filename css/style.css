@@ -1,47 +1,64 @@
-@font-face { 
-    font-family: ValueSansProBold;
-    src: url("fonts/ValueSansProBold/ValueSansProBold.eot");
-    src: url("fonts/ValueSansProBold/ValueSansProBold.eot?#iefix")format("embedded-opentype"),
-    url("fonts/ValueSansProBold/ValueSansProBold.woff") format("woff"),
-    url("fonts/ValueSansProBold/ValueSansProBold.ttf") format("truetype");
-    font-style: normal;
-    font-weight: 700;
-}
-/*MARK: HEADER*/
 
-.head{
-    background-color: #274646;
+
+
+/*MARK: HEADER*/
+body{
+    font-family: "ValueSansPro"; 
+    font-weight: bold;
+}
+
+
+.header{
     position: fixed;
     left: 0;
     top: 0;
     right:0;
-    margin: 20px;
+    font-family: ValueSansPro;
+}
+.head{
+    background-color: #274646;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
     
 }
+
+.left-header{
+    margin-right: auto;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+    gap: 24px;
+    margin-left: auto;
+    
+}
+
 .menu-button{
     background-color: #274646;
     display: inline-block;
-    padding-left: 52px;
     cursor: pointer;
     vertical-align:middle;
     
+    
 }
 .logo{
-    padding: 19px;
     display: inline-block;
     vertical-align:middle;
+    margin-left: auto
     
 }
 .telephone-number{
     color: #A0A0A0;
     display: inline-block;
-    font-family: ValueSansProBold;
     font-size: 14px;
+    
 }
 .geolocation{
     display: inline-block;
     vertical-align:middle;
-    padding-left: 24px;
+    
 }
 .geolocation img{
     vertical-align:middle;
@@ -52,4 +69,86 @@
     font-size: 14px;
     padding-left: 6px;
 }
+
+.right-header{
+    margin-right: auto;
+    display: flex;
+    justify-content: space-between;
+    gap: 24px;
+    margin-left: auto
+    
+
+}
+
+.shimings{
+    display: inline-block;
+    vertical-align:middle;
+    
+}
+.shimings img{
+    vertical-align:middle;
+}
+.shimings-label{
+    display: inline-block;
+    color: #FFBDC8;
+    font-size: 14px;
+    padding-left: 6px;
+}
+
+.cart{
+    display: inline-flex;
+    vertical-align:middle;
+    
+    
+}
+.cart-label{
+    display: inline-block;
+    vertical-align:middle;
+    color: #FFFFFF;
+    font-size: 12px;
+    background: #B20D30;
+    border-radius:50%;
+    width:18px;
+    height:18px;
+    text-align:center;
+}
+
+.cart img{
+    vertical-align:middle;
+}
+
+.cart-cost{
+    display: flex;
+    color: #FFFFFF;
+    font-size: 14px;
+    vertical-align:middle;
+    padding-left: 8px;
+}
+
+.topnav {
+    display: flex;
+    justify-content: center;
+    margin-right: auto;
+    margin-left: auto;
+    gap: 48px;
+}
+
+.topnav a {
+    color: #274646;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    border-bottom: 3px solid transparent;
+    padding-top: 16px;
+}
+
+.topnav a:hover {
+    border-bottom: 3px solid #274646;
+}
+
+.topnav a.active {
+    border-bottom: 3px solid #274646;
+}
+
+
 
