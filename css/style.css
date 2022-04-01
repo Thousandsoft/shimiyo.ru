@@ -11,6 +11,8 @@ body{
     margin: 0 auto;
     display: flex;
     justify-content: start;
+    height: 100%;
+    width: 100%;
 }
 
 .header{
@@ -18,23 +20,23 @@ body{
     left: 0;
     top: 0;
     right:0;
-    font-family: ValueSansPro;
     display: block;
     align-items: center;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 }
 .head{
     background-color: #274646;
+    height: 54px;
+    vertical-align:middle;
 }
 
 .left-header{
-    /*margin-right: auto;*/
-    padding-top: 20px;
-    padding-bottom: 20px;
     display: flex;
     justify-content: space-between;
     gap: 24px;
-   /* margin-left: auto;*/
+    vertical-align:middle;
+    margin-top: auto;
+    margin-bottom: auto;
     
 }
 
@@ -77,11 +79,13 @@ body{
     margin-left: auto;
     display: flex;
     justify-content: space-between;
+    vertical-align:middle;
     gap: 24px;
-    padding-top: 20px;
-    padding-bottom: 20px;
+    margin-top: auto;
+    margin-bottom: auto;
 
 }
+
 
 .shimings{
     display: inline-block;
@@ -100,31 +104,40 @@ body{
 
 .cart{
     display: inline-flex;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-right: auto;
     vertical-align:middle;
     
-    
-}
-.cart-label{
-    display: inline-block;
-    vertical-align:middle;
-    color: #FFFFFF;
-    font-size: 12px;
-    background: #B20D30;
-    border-radius:50%;
-    width:18px;
-    height:18px;
-    text-align:center;
 }
 
+
+.cart{
+    display: inline-block;
+    vertical-align:middle;
+    
+}
 .cart img{
     vertical-align:middle;
 }
-
+.cart-label{
+    display: inline-block;
+    color: #FFFFFF;
+    font-size: 12px;
+    text-align: center;
+    background: #B20D30;
+    width:18px;
+    height:18px;
+    line-height: 18px;
+    border-radius: 50%;
+}
 .cart-cost{
-    display: flex;
+    display: inline-block;
+    vertical-align:middle;
     color: #FFFFFF;
     font-size: 14px;
-    vertical-align:middle;
+    margin-top: auto;
+    margin-bottom: auto;
     padding-left: 8px;
 }
 
@@ -133,6 +146,9 @@ body{
     justify-content: center;
     gap: 48px;
     overflow: auto;
+    white-space: nowrap;
+    border-bottom: 1px solid #E5E5E5;
+    margin-bottom: 16px;
 }
 
 .topnav a {
@@ -140,7 +156,6 @@ body{
     text-align: center;
     text-decoration: none;
     font-size: 16px;
-    border-bottom: 1px solid #E5E5E5;
     padding-top: 16px;
 }
 
@@ -176,11 +191,18 @@ body{
     color: #274646;
 }
 
+@media (max-width: 768px) {
+    .telephone-number{
+        display: none;
+    }
+}
+
 /* Containers begin */
 @media (min-width: 576px) {
     .container {
         max-width: 540px;
     }
+    
 }
 
 @media (min-width: 768px) {
@@ -193,6 +215,7 @@ body{
     .container {
         max-width: 960px;
     }
+    
 }
 
 @media (min-width: 1280px) {
