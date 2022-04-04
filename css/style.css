@@ -217,7 +217,16 @@ body{
     .container {
         padding-left: 0.75rem;
     }
+
     .left-header{
+        padding-right: 1.25rem;
+    }
+
+    .topnav{
+        padding-right: 1.25rem;
+    }
+
+    .recent-bar{
         padding-right: 1.25rem;
     }
 }
