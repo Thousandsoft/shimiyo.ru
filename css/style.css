@@ -43,6 +43,7 @@ body{
     display: flex;
     margin-top: auto;
     margin-bottom: auto;
+    margin-right: auto;
     gap: 28px;
     width: 100%;
 }
@@ -214,14 +215,16 @@ body{
 
 @media (max-width: 575px) {
     .container {
-        padding: 0 0.75rem;
+        padding-left: 0.75rem;
+    }
+    .left-header{
+        padding-right: 1.25rem;
     }
 }
 
 @media (min-width: 576px) {
     .container {
         max-width: 540px;
-        
     }
 }
 
