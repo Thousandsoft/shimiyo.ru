@@ -9,8 +9,9 @@ body{
 
 .container{
     margin: 0 auto;
+    width: auto;
+    padding: 0 .75rem;
     height: 100%;
-    width: 100%;
 }
 
 .header{
@@ -213,21 +214,11 @@ body{
     color: #274646;
 }
 
-@media (max-width: 575px) {
+/* Containers start */
+
+@media (max-width: 576px) {
     .container {
-        padding-left: 0.75rem;
-    }
-
-    .left-header{
-        padding-right: 1.25rem;
-    }
-
-    .topnav{
-        padding-right: 1.25rem;
-    }
-
-    .recent-bar{
-        padding-right: 1.25rem;
+        max-width: 540px;
     }
 }
 
@@ -301,27 +292,22 @@ body{
     .telephone-number{
         display: block;
     }
+    .telephone-number a {
+        color: #A0A0A0;
+        font-size: 14px;
+        text-decoration: none;
+    }
 }
 
 @media (min-width: 1200px) {
     .container {
         max-width: 1140px;
     }
-
-    .header-left {
-        padding-left: 17px;
-    }
-
-    
 }
 
 @media (min-width:1400px) {
     .container {
         max-width: 1320px;
-    }
-
-    .header-left {
-        padding-left: 0;
     }
 }
 /* Containers end */
