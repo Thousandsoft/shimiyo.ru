@@ -3,8 +3,10 @@
 
 /*MARK: HEADER*/
 body{
-    font-family: "ValueSansPro"; 
-    font-weight: bold;
+    
+    margin: 0;
+    padding: 0;
+    border: 0;
 }
 
 .container{
@@ -14,14 +16,19 @@ body{
     height: 100%;
 }
 
+.main{
+    height: 100%;
+    width: 100%;
+}
+
+
 .header{
-    position: fixed;
-    left: 0;
-    top: 0;
-    right:0;
+    position: relative;
     display: block;
     align-items: center;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    font-family: "ValueSansPro"; 
+    font-weight: bold;
 }
 .head{
     background-color: #274646;
@@ -213,6 +220,103 @@ body{
     background-color: #E9E6E6;
     color: #274646;
 }
+
+
+/*MARK: BODY*/
+
+.content{
+    display: block;
+    width: auto;
+    padding-top: 1rem;
+}
+
+.stories{
+    display: flex;
+    gap: 16px;
+    width: 100%;
+    overflow-x: auto;
+    overflow-y: hidden;
+    white-space: nowrap;
+    height: 320px;
+}
+
+.stories::-webkit-scrollbar-track
+{
+	border-radius: 2px;
+	background-color: #F5F5F5;
+}
+
+.stories::-webkit-scrollbar
+{
+    height: 4px;
+	background-color: #E5E5E5;
+}
+
+.stories::-webkit-scrollbar-thumb
+{
+	border-radius: 2px;
+	background-color: #A0A0A0;
+}
+
+
+.story{
+    border-radius: 16px;
+    height: 284px;
+    width: 160px;
+}
+
+
+.story img{
+   
+    height: 100%;
+    border: double 2px transparent;
+    border-radius: 16px;
+    background-image: linear-gradient(white, white), 
+                    linear-gradient(#F7BDC7,#F293A2);
+    background-origin: border-box;
+    background-clip: padding-box, border-box;
+    padding: 2px;
+}
+
+.stripe{
+    display: flex;
+    font-size: 80px;
+    width: 100%;
+    height: 100px;
+    background: linear-gradient(#F7BDC7,#F293A2);
+    margin-top: 48px;
+    color: #FFD8E1;
+    white-space: nowrap;
+    overflow: hidden;
+    gap: 176px;
+    justify-content: start;
+    align-items: center;
+    text-align: center;
+}
+
+.stripe_text {
+    height: 100%;
+    width: auto;
+    display: flex;
+    animation: text 4s infinite linear;
+    font-family: "RimmaSansBold"; 
+    font-weight: bold;
+}
+
+.stripe_text a{
+    height: 100%;
+}
+
+@keyframes text {
+    0% {
+        transform: translate(0, 0);
+    }
+    100% {
+        transform: translate(-535px, 0)
+    }
+}
+
+ 
 
 /* Containers start */
 
