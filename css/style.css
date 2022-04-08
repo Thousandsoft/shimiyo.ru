@@ -385,6 +385,36 @@ body{
     height: 24px;
 }
 
+.catalog_grid_card_types-spicy img:last-child {
+    display: none;  
+}
+  .catalog_grid_card_types-spicy:hover img:last-child {
+    display: block;  
+}
+  .catalog_grid_card_types-spicy:hover img:first-child {
+    display: none;  
+}
+
+.catalog_grid_card_types-hot img:last-child {
+    display: none;  
+}
+  .catalog_grid_card_types-hot:hover img:last-child {
+    display: block;  
+}
+  .catalog_grid_card_types-hot:hover img:first-child {
+    display: none;  
+}
+
+.catalog_grid_card_types-vegan img:last-child {
+    display: none;  
+}
+  .catalog_grid_card_types-vegan:hover img:last-child {
+    display: block;  
+}
+  .catalog_grid_card_types-vegan:hover img:first-child {
+    display: none;  
+}
+
 .catalog_grid_card_image img{
     width: 136px;
     height: 99px;
