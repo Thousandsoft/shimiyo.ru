@@ -231,7 +231,7 @@ body{
 
 .content{
     display: block;
-    width: auto;
+    width: 100%;
     padding-top: 174px;
 }
 
@@ -299,11 +299,30 @@ body{
     text-align: center;
 }
 
-.stripe_text {
+
+.stripe_text_rolls {
     height: 100%;
     width: auto;
     display: flex;
-    animation: text 4s infinite linear;
+    animation: rollsAnim 4s infinite linear;
+    font-family: "RimmaSansBold"; 
+    font-weight: bold;
+}
+
+.stripe_text_sushi {
+    height: 100%;
+    width: auto;
+    display: flex;
+    animation: sushiAnim 4s infinite linear;
+    font-family: "RimmaSansBold"; 
+    font-weight: bold;
+}
+
+.stripe_text_pokebol {
+    height: 100%;
+    width: auto;
+    display: flex;
+    animation: pokebolAnim 4s infinite linear;
     font-family: "RimmaSansBold"; 
     font-weight: bold;
 }
@@ -325,28 +344,34 @@ body{
 
 .catalog_grid {
     display: grid;
-    /*grid-template-rows: 1fr 1fr;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-row-gap: 24px;*/
     grid-column-gap: 32px;
     padding-top: 32px;
 }
 
 .catalog_grid_card{
-    width: auto;
-    height: 320;
+    width: 100%;
+    max-height: 155px;
     border-radius: 8px;
     border: 2px solid transparent;
-    padding: 1rem;
+    display: flex;
+    border-bottom: 1px solid #E5E5E5;
+    padding-top: 1.5rem;
+    
+}
+.catalog_grid_card_information{
+    display: inline-block;
+    width: 100%;
+    
+}
+.catalog_grid_card_images{
+    display: inline-block;
+   
 }
 
 
 .catalog_grid_card:hover{
-    width: 306;
-    height: 320;
     border-radius: 8px;
     border: 2px solid #F7F7F7;
-    padding: 1rem;
 }
 
 .catalog_grid_cald_types{
@@ -355,20 +380,29 @@ body{
     gap: 8px;
 }
 
+.catalog_grid_cald_types img{
+    width: 24px;
+    height: 24px;
+}
+
+.catalog_grid_card_image img{
+    width: 136px;
+    height: 99px;
+}
+
 .catalog_grid_card_name{
     color: #6B6B6B;
     font-weight: 500;
 }
 
 .catalog_grid_card_count{
-    margin-top: 4px;
-    color: #757575;
-    font-weight: 400;
+    display: none;
 }
 
 .catalog_grid_card_cost{
     float: right;
     padding-top: 1rem;
+    
 }
 
 .catalog_grid_card_cost-old {
@@ -407,13 +441,41 @@ body{
     font-weight: bold;
 }
 
+.sushi-stripe{
+    background: linear-gradient(#FDC944,#F9B147);
+    color: #FFE091;
+}
 
-@keyframes text {
+.pokebol-stripe{
+    background: linear-gradient(#003D3D,#001918);
+    color: #006666;
+}
+
+
+@keyframes rollsAnim {
     0% {
         transform: translate(0, 0);
     }
     100% {
-        transform: translate(-535px, 0)
+        transform: translate(-533.77px, 0)
+    }
+}
+
+@keyframes sushiAnim {
+    0% {
+        transform: translate(0, 0);
+    }
+    100% {
+        transform: translate(-453.28px, 0)
+    }
+}
+
+@keyframes pokebolAnim {
+    0% {
+        transform: translate(0, 0);
+    }
+    100% {
+        transform: translate(-963.45px, 0)
     }
 }
 
@@ -447,15 +509,40 @@ body{
         grid-column-gap: 32px;
         padding-top: 32px;
     }
-
+    
     .catalog_grid_card{
-    width: auto;
-    height: 320;
-    border-radius: 8px;
-    border: 2px solid transparent;
-    padding: 1rem;
-}
+        width: auto;
+        max-height: 304px;
+        max-width: 290px;
+        border-radius: 8px;
+        border: 2px solid transparent;
+        padding: 1rem;
+        display: flex;
+        flex-direction: column;
+    }
 
+    .catalog_grid_card_information{
+        display: block;
+        
+    }
+    .catalog_grid_card_images{
+        display: block;
+       
+    }
+    
+    .catalog_grid_card_image img{
+       height: auto;
+       width: 307.5px;
+    }
+
+    .catalog_grid_card_count{
+        display: block;
+        margin-top: 4px;
+        color: #757575;
+        font-weight: 400;
+        font-size: 14px;
+    }
+    
 
     .header-right {
         display: flex;
@@ -520,12 +607,14 @@ body{
         font-size: 14px;
         text-decoration: none;
     }
+
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 1280px) {
     .container {
-        max-width: 1140px;
+        max-width: 1245px;
     }
+
     .catalog_grid {
         display: grid;
         grid-template-rows: 1fr 1fr;
@@ -534,6 +623,12 @@ body{
         grid-column-gap: 32px;
         padding-top: 32px;
     }
+
+    .catalog_grid_card_image img{
+        height: auto;
+        width: 252.5px;
+    }
+    
     
 }
 
@@ -541,6 +636,23 @@ body{
     .container {
         max-width: 1320px;
     }
+
+    .catalog_grid {
+        display: grid;
+        grid-template-rows: 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-row-gap: 24px;
+        grid-column-gap: 32px;
+        padding-top: 32px;
+    }
+
+    .catalog_grid_card_image img{
+        height: auto;
+        width: auto;
+    }
+    
+    
+    
     
     
 }
