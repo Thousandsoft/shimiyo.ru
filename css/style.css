@@ -88,6 +88,12 @@ body{
     font-size: 14px;
     
 }
+
+.telephone-number a{
+    vertical-align: sub;
+    
+}
+
 .geolocation{
     display: inline-block;
     vertical-align:middle;
@@ -181,10 +187,11 @@ body{
     text-align: center;
     text-decoration: none;
     font-size: 16px;
+    border-bottom: 3px solid transparent;
 }
 
 .topnav a:hover {
-    border-bottom: 3px solid #274646;
+    border-bottom: 3px solid #FFBDC8;
 }
 
 .topnav a.active {
@@ -214,17 +221,24 @@ body{
     justify-content: center;
     text-align: center;
     font-size: 16px;
-    border-bottom: 1px solid #E5E5E5;
+    border: 2px solid #F7F7F7;
     height: 40px;
     border-radius: 46px;
     padding-left: 14px;
     padding-right: 12px;
 }
 
+.recent-bar a:hover{
+    background-color: #FFFFFF;
+    color: #274646;
+    border: 2px solid #274646;
+}
+
 .recent-bar a.active {
     background-color: #E9E6E6;
     color: #274646;
 }
+
 
 
 /*MARK: BODY*/
@@ -249,17 +263,19 @@ body{
 {
 	border-radius: 2px;
 	background-color: #F5F5F5;
+    
 }
 
 .stories::-webkit-scrollbar
 {
-    height: 4px;
+    height: 2px;
 	background-color: #E5E5E5;
+    
 }
 
 .stories::-webkit-scrollbar-thumb
 {
-	border-radius: 2px;
+	border-radius: 16px;
 	background-color: #A0A0A0;
 }
 
@@ -283,17 +299,30 @@ body{
     padding: 2px;
 }
 
+.story :hover img{
+   
+    height: 100%;
+    border: double 2px transparent;
+    border-radius: 16px;
+    background-image: linear-gradient(white, white), 
+                    linear-gradient(#E9E6E6,#E9E6E6);
+    background-origin: border-box;
+    background-clip: padding-box, border-box;
+    padding: 2px;
+}
+
+
 .stripe{
     display: flex;
-    font-size: 80px;
+    font-size: 60px;
     width: 100%;
-    height: 100px;
+    height: 80px;
     background: linear-gradient(#F7BDC7,#F293A2);
     margin-top: 48px;
     color: #FFD8E1;
     white-space: nowrap;
     overflow: hidden;
-    gap: 176px;
+    gap: 88px;
     justify-content: start;
     align-items: center;
     text-align: center;
@@ -304,7 +333,7 @@ body{
     height: 100%;
     width: auto;
     display: flex;
-    animation: rollsAnim 4s infinite linear;
+    animation: rollsAnimSmall 4s infinite linear;
     font-family: "RimmaSansBold"; 
     font-weight: bold;
 }
@@ -313,7 +342,7 @@ body{
     height: 100%;
     width: auto;
     display: flex;
-    animation: sushiAnim 4s infinite linear;
+    animation: sushiAnimSmall 4s infinite linear;
     font-family: "RimmaSansBold"; 
     font-weight: bold;
 }
@@ -322,14 +351,14 @@ body{
     height: 100%;
     width: auto;
     display: flex;
-    animation: pokebolAnim 4s infinite linear;
+    animation: pokebolAnimSmall 4s infinite linear;
     font-family: "RimmaSansBold"; 
     font-weight: bold;
 }
 
-.stripe_text a{
+/*.stripe_text a{
     height: 100%;
-}
+}*/
 
 .catalog {
     padding-top: 64px;
@@ -337,7 +366,7 @@ body{
 }
 
 .catalog_name {
-    font-size: 32px;
+    font-size: 24px;
     color: #274646;
     font-weight: 500;
 }
@@ -369,15 +398,12 @@ body{
 }
 
 
-.catalog_grid_card:hover{
-    border-radius: 8px;
-    border: 2px solid #F7F7F7;
-}
+
 
 .catalog_grid_cald_types{
-    position: absolute;
     display: flex;
     gap: 8px;
+    height: 24px;
 }
 
 .catalog_grid_cald_types img{
@@ -431,7 +457,7 @@ body{
 
 .catalog_grid_card_cost{
     float: right;
-    padding-top: 1rem;
+    padding-top: 2rem;
     
 }
 
@@ -439,6 +465,7 @@ body{
     display: inline-block;
     color: #A0A0A0;
     font-weight: 400;
+    font-size: 14px;
 }
 
 .catalog_grid_card_cost-button {
@@ -482,16 +509,17 @@ body{
 }
 
 
-@keyframes rollsAnim {
+@keyframes rollsAnimBig {
     0% {
         transform: translate(0, 0);
     }
     100% {
-        transform: translate(-533.77px, 0)
+        transform: translate(-533.77px, 0);
+        
     }
 }
 
-@keyframes sushiAnim {
+@keyframes sushiAnimBig {
     0% {
         transform: translate(0, 0);
     }
@@ -500,12 +528,40 @@ body{
     }
 }
 
-@keyframes pokebolAnim {
+@keyframes pokebolAnimBig {
     0% {
         transform: translate(0, 0);
     }
     100% {
         transform: translate(-963.45px, 0)
+    }
+}
+
+@keyframes rollsAnimSmall {
+    0% {
+        transform: translate(0, 0);
+    }
+    100% {
+        transform: translate(-357.77px, 0);
+        
+    }
+}
+
+@keyframes sushiAnimSmall {
+    0% {
+        transform: translate(0, 0);
+    }
+    100% {
+        transform: translate(-295.97px, 0)
+    }
+}
+
+@keyframes pokebolAnimSmall {
+    0% {
+        transform: translate(0, 0);
+    }
+    100% {
+        transform: translate(-678.59px, 0)
     }
 }
 
@@ -531,10 +587,33 @@ body{
         
     }
 
+
+    .stripe{
+        font-size: 80px;
+        height: 100px;
+        gap: 176px;
+    }
+    
+    
+    .stripe_text_rolls {
+        animation: rollsAnimBig 4s infinite linear;
+    }
+    
+    .stripe_text_sushi {
+        animation: sushiAnimBig 4s infinite linear;
+        
+    }
+    
+    .stripe_text_pokebol {
+        animation: pokebolAnimBig 4s infinite linear;
+        
+    }
+
+
     .catalog_grid {
         display: grid;
         grid-template-rows: 1fr 1fr 1fr 1fr;
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 2fr 1fr;
         grid-row-gap: 24px;
         grid-column-gap: 32px;
         padding-top: 32px;
@@ -551,10 +630,20 @@ body{
         flex-direction: column;
     }
 
+    .catalog_grid_card:hover{
+        border-radius: 8px;
+        border: 2px solid #F7F7F7;
+    }
+
     .catalog_grid_card_information{
         display: block;
         
     }
+
+    .catalog_name {
+        font-size: 32px;
+    }
+
     .catalog_grid_card_images{
         display: block;
        
@@ -565,6 +654,12 @@ body{
        width: 307.5px;
     }
 
+    .catalog_grid_card_cost{
+        padding-top: 1rem;
+        
+    }
+
+
     .catalog_grid_card_count{
         display: block;
         margin-top: 4px;
@@ -573,6 +668,10 @@ body{
         font-size: 14px;
     }
     
+    .catalog_grid_cald_types{
+        position: absolute;
+    }
+
 
     .header-right {
         display: flex;
@@ -664,7 +763,7 @@ body{
 
 @media (min-width:1400px) {
     .container {
-        max-width: 1320px;
+        max-width: 1291px;
     }
 
     .catalog_grid {
