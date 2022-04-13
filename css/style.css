@@ -448,6 +448,98 @@ body {
     color: #006666;
 }
 
+/*MARK:Footer*/
+
+.footer_info {
+    background-color: #274646;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: "ValueSansPro";
+    font-weight: 500;
+    gap: 32px;
+    padding-top: 64px;
+    padding-bottom: 64px;
+    margin-top: 64px;
+}
+
+.footer_info hr{
+    background-color: #FFBDC8;
+    width: 400px;
+}
+
+.footer_info_nav{
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    text-align: center;
+    font-size: 24px;
+}
+
+.footer_info_nav a{
+    text-decoration: none;
+    color: #F7F7F7;
+}
+
+.footer_info_mobile_logo img{
+    height: 32px;
+    width: 32px;
+}
+
+.footer_info_socialmedia{
+    display: flex;
+    gap: 16px;
+}
+
+.footer_info_socialmedia img {
+    height: 32px;
+    width: 32px;
+}
+
+.footer_about{
+    height: 47px;
+    background-color: #565D95;
+    display: flex;
+}
+
+.footer_about_left {
+    display: flex;
+    gap: 1rem;
+    font-family: "ValueSansPro";
+    font-weight: 300;
+    color: #FFFFFF;
+    padding-left: 60px;
+    align-items: center;
+    width: 100%;
+}
+
+.footer_about_left a{
+    color:#FFFFFF;
+}
+
+.footer_about_right {
+    display: flex;
+    gap: 8px;
+    font-family: "ValueSansPro";
+    font-weight: 500;
+    color: #FFFFFF;
+    padding-right: 60px;
+    align-items: center;
+    white-space: nowrap;
+}
+
+.footer_about_right_text{
+    display: flex;
+    gap: 0px;
+}
+
+.footer_about_right_text_yellow{
+    color: #f2b124;
+}
+
+.footer_about_right_text_white{
+    color: white;
+}
 
 @keyframes rollsAnimBig {
     0% {
