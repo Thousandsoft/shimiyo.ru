@@ -449,32 +449,6 @@ body {
 }
 
 
-/*MARK:Footer*/
-
-.footer_info {
-    background-color: #274646;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    font-family: "ValueSansPro";
-    font-weight: 500;
-}
-
-.footer_info_nav{
-    display: flex;
-    flex-direction: column;
-    gap: 40px;
-    padding-top: 64px;
-    text-align: center;
-    
-}
-
-.footer_info_nav a{
-    font-size: 24;
-    text-decoration: none;
-    color: #F7F7F7;
-}
-
 @keyframes rollsAnimBig {
     0% {
         transform: translate(0, 0);
