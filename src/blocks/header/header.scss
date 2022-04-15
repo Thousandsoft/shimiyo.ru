@@ -1,0 +1,175 @@
+/*MARK: HEADER*/
+
+.header {
+    position: fixed;
+    width: 100%;
+    box-shadow: 0px 4px 4px rgb(0 0 0 / 15%);
+    font-family: "ValueSansPro";
+    font-weight: bold;
+    background-color: #FFFFFF;
+    z-index: 10;
+}
+.head {
+    background-color: $green-color;
+    height: 54px;
+}
+
+.container-header {
+    display: flex;
+    height: 100%;
+}
+
+.left-header {
+    display: flex;
+    height: 100%;
+    align-items: center;
+    gap: 28px;
+    width: 100%;
+}
+
+.menu-button{
+    background-color: $green-color;
+    cursor: pointer;
+}
+.logo{
+    display: none;
+}
+
+.telephone-number{
+    color: #A0A0A0;
+    display: none;
+    font-size: 14px;
+}
+
+.address-label{
+    color: #FFE091;
+    font-size: 14px;
+}
+
+
+.geolocation{
+    margin-left: auto;
+}
+
+.geolocation a{
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    text-decoration: none;
+}
+
+.right-header{
+    display: none;
+}
+
+.shimings{
+    display: block;
+    
+}
+
+.shimings a{
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    text-decoration: none;
+}
+
+.shimings-label{
+    color: $pink-color;
+    font-size: 14px;
+    
+}
+
+.cart{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.cart a{
+    display: flex;
+    align-items: center;
+}
+
+.cart-label{
+    color: #FFFFFF;
+    font-size: 12px;
+    text-align: center;
+    background: #B20D30;
+    width:18px;
+    height:18px;
+    line-height: 18px;
+    border-radius: 50%;
+}
+.cart-cost{
+    color: #FFFFFF;
+    font-size: 14px;
+    white-space: nowrap;
+}
+
+.topnav {
+    display: flex;
+    height: 52px;
+    gap: 48px;
+    overflow: auto;
+    white-space: nowrap;
+    border-bottom: 1px solid #E5E5E5;
+    background-color: #FFFFFF;
+}   
+
+.topnav::-webkit-scrollbar {
+    display:none;
+}
+
+.topnav a {
+    display: flex;
+    color: $green-color;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    border-bottom: 3px solid transparent;
+}
+
+.topnav a:hover {
+    border-bottom: 3px solid $pink-color;
+}
+
+.topnav a.active {
+    border-bottom: 3px solid $green-color;
+}
+
+.recent-bar{
+    display: flex;
+    gap: 16px;
+    height: 56px;
+    align-items: center;
+    overflow: auto;
+    white-space: nowrap;
+    background-color: #FFFFFF;
+}
+
+.recent-bar::-webkit-scrollbar {
+    display:none;
+}
+
+.recent-bar a {
+    color: #6B6B6B;
+    text-decoration: none;
+    font-size: 16px;
+    border: 2px solid #F7F7F7;
+    border-radius: 46px;
+    padding: 12px;
+}
+
+.recent-bar a:hover{
+    background-color: #FFFFFF;
+    color: $green-color;
+    border: 2px solid $green-color;
+}
+
+.recent-bar a.active {
+    background-color: #E9E6E6;
+    color: $green-color;
+}
