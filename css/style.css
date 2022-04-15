@@ -2,134 +2,118 @@
 
 
 /*MARK: HEADER*/
-body{
-    font-family: "ValueSansPro"; 
-    font-weight: bold;
+body {
+    margin: 0;
+    padding: 0;
+    border: 0;
 }
 
-.container{
+
+.container {
     margin: 0 auto;
     width: auto;
     padding: 0 .75rem;
     height: 100%;
 }
 
-.header{
-    position: fixed;
-    left: 0;
-    top: 0;
-    right:0;
-    display: block;
-    align-items: center;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+.main {
+    height: 100%;
+    width: 100%;
 }
-.head{
+
+
+.header {
+    position: fixed;
+    width: 100%;
+    box-shadow: 0px 4px 4px rgb(0 0 0 / 15%);
+    font-family: "ValueSansPro";
+    font-weight: bold;
+    background-color: #FFFFFF;
+    z-index: 10;
+}
+.head {
     background-color: #274646;
     height: 54px;
-    vertical-align:middle;
 }
 
-.container-header{
+.container-header {
     display: flex;
-        justify-content: start;
-        align-items: center;
-        justify-content: center;
-        text-align: center;
-        height: 100%;
+    height: 100%;
 }
 
-
-
-.left-header{
+.left-header {
     display: flex;
-    margin-top: auto;
-    margin-bottom: auto;
-    margin-right: auto;
+    height: 100%;
+    align-items: center;
     gap: 28px;
     width: 100%;
 }
 
 .menu-button{
     background-color: #274646;
-    display: inline-block;
     cursor: pointer;
-    vertical-align:middle;
-    margin-top: auto;
-    margin-bottom: auto;
-    
-    
 }
 .logo{
     display: none;
-    vertical-align:middle;
-    
-}
-
-.mobile_logo{
-    display: inline-block;
-    vertical-align:middle;
-    margin-top: auto;
-    margin-bottom: auto;
 }
 
 .telephone-number{
     color: #A0A0A0;
     display: none;
     font-size: 14px;
-    
 }
-.geolocation{
-    display: inline-block;
-    vertical-align:middle;
-    margin-left: auto;
-    margin-top: auto;
-    margin-bottom: auto;
-    
-}
-.geolocation img{
-    vertical-align:middle;
-}
+
 .address-label{
-    display: inline-block;
     color: #FFE091;
     font-size: 14px;
-    padding-left: 6px;
+}
+
+
+.geolocation{
+    margin-left: auto;
+}
+
+.geolocation a{
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    text-decoration: none;
 }
 
 .right-header{
     display: none;
 }
 
-
 .shimings{
-    display: inline-block;
-    vertical-align:middle;
+    display: block;
     
 }
-.shimings img{
-    vertical-align:middle;
+
+.shimings a{
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    text-decoration: none;
 }
+
 .shimings-label{
-    display: inline-block;
     color: #FFBDC8;
     font-size: 14px;
-    padding-left: 6px;
+    
 }
 
 .cart{
-    display: inline-block;
-    margin-top: auto;
-    margin-bottom: auto;
-    margin-right: auto;
-    vertical-align:middle;
-    
+    display: flex;
+    align-items: center;
+    gap: 8px;
 }
 
-.cart img{
-    vertical-align:middle;
+.cart a{
+    display: flex;
+    align-items: center;
 }
+
 .cart-label{
-    display: inline-block;
     color: #FFFFFF;
     font-size: 12px;
     text-align: center;
@@ -140,13 +124,9 @@ body{
     border-radius: 50%;
 }
 .cart-cost{
-    display: inline-block;
-    vertical-align:middle;
     color: #FFFFFF;
     font-size: 14px;
-    margin-top: auto;
-    margin-bottom: auto;
-    padding-left: 8px;
+    white-space: nowrap;
 }
 
 .topnav {
@@ -156,6 +136,7 @@ body{
     overflow: auto;
     white-space: nowrap;
     border-bottom: 1px solid #E5E5E5;
+    background-color: #FFFFFF;
 }   
 
 .topnav::-webkit-scrollbar {
@@ -170,10 +151,11 @@ body{
     text-align: center;
     text-decoration: none;
     font-size: 16px;
+    border-bottom: 3px solid transparent;
 }
 
 .topnav a:hover {
-    border-bottom: 3px solid #274646;
+    border-bottom: 3px solid #FFBDC8;
 }
 
 .topnav a.active {
@@ -183,11 +165,11 @@ body{
 .recent-bar{
     display: flex;
     gap: 16px;
-    height: 52px;
+    height: 56px;
     align-items: center;
-    text-align: center;
     overflow: auto;
     white-space: nowrap;
+    background-color: #FFFFFF;
 }
 
 .recent-bar::-webkit-scrollbar {
@@ -195,24 +177,341 @@ body{
 }
 
 .recent-bar a {
-    display: flex;
     color: #6B6B6B;
     text-decoration: none;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
     font-size: 16px;
-    border-bottom: 1px solid #E5E5E5;
-    height: 40px;
+    border: 2px solid #F7F7F7;
     border-radius: 46px;
-    padding-left: 14px;
-    padding-right: 12px;
+    padding: 12px;
+}
+
+.recent-bar a:hover{
+    background-color: #FFFFFF;
+    color: #274646;
+    border: 2px solid #274646;
 }
 
 .recent-bar a.active {
     background-color: #E9E6E6;
     color: #274646;
 }
+
+
+
+/*MARK: BODY*/
+
+.content{
+    display: block;
+    width: 100%;
+    padding-top: 174px;
+}
+
+.stories{
+    display: flex;
+    gap: 16px;
+    width: 100%;
+    overflow-x: auto;
+    overflow-y: hidden;
+    white-space: nowrap;
+    height: 320px;
+}
+
+.stories::-webkit-scrollbar-track
+{
+	border-radius: 2px;
+	background-color: #F5F5F5;
+    
+}
+
+.stories::-webkit-scrollbar
+{
+    height: 2px;
+	background-color: #E5E5E5;
+    
+}
+
+.stories::-webkit-scrollbar-thumb
+{
+	border-radius: 16px;
+	background-color: #A0A0A0;
+}
+
+
+.story{
+    border-radius: 16px;
+    height: 284px;
+    width: 160px;
+}
+
+
+.story img{
+   
+    height: 100%;
+    border: double 2px transparent;
+    border-radius: 16px;
+    background-image: linear-gradient(white, white), 
+                    linear-gradient(#F7BDC7,#F293A2);
+    background-origin: border-box;
+    background-clip: padding-box, border-box;
+    padding: 2px;
+}
+
+.story :hover img{
+   
+    height: 100%;
+    border: double 2px transparent;
+    border-radius: 16px;
+    background-image: linear-gradient(white, white), 
+                    linear-gradient(#E9E6E6,#E9E6E6);
+    background-origin: border-box;
+    background-clip: padding-box, border-box;
+    padding: 2px;
+}
+
+
+.stripe{
+    display: flex;
+    font-size: 60px;
+    width: 100%;
+    height: 80px;
+    background: linear-gradient(#F7BDC7,#F293A2);
+    margin-top: 48px;
+    color: #FFD8E1;
+    white-space: nowrap;
+    overflow: hidden;
+    gap: 88px;
+    justify-content: start;
+    align-items: center;
+    text-align: center;
+}
+
+
+.stripe_text_rolls {
+    padding-bottom: 20px;
+    animation: rollsAnimSmall 4s infinite linear;
+    font-family: "RimmaSansBold"; 
+    font-weight: bold;
+}
+
+
+.stripe_text_sushi {
+    animation: sushiAnimSmall 4s infinite linear;
+    font-family: "RimmaSansBold"; 
+    font-weight: bold;
+    padding-bottom: 20px;
+}
+
+.stripe_text_pokebol {
+    animation: pokebolAnimSmall 4s infinite linear;
+    font-family: "RimmaSansBold"; 
+    font-weight: bold;
+    padding-bottom: 20px;
+}
+
+
+.catalog {
+    font-family: "ValueSansPro";
+}
+
+.catalog_name {
+    font-size: 24px;
+    color: #274646;
+    font-weight: 500;
+    margin: 0;
+    padding-top: 64px;
+    padding-bottom: 32px;
+}
+
+.catalog_grid {
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+.catalog_grid_border{
+    width:100%;
+    border: 1px solid #E5E5E5;
+    
+}
+
+.catalog_grid_card{
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    padding: 16px;
+    
+}
+.catalog_grid_card_information{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+}
+
+
+.catalog_grid_card_images{
+    position: relative;
+}
+
+.catalog_grid_card_image img{
+    width: 136px;
+    height: 99px;
+}
+
+.catalog_grid_cald_types{
+    position: absolute;
+    top: 0;
+    display: flex;
+    gap: 8px;
+    height: 24px;
+}
+
+.catalog_grid_cald_types img{
+    width: 24px;
+    height: 24px;
+}
+
+.catalog_grid_card_types-spicy img:last-child {
+    display: none;  
+}
+  .catalog_grid_card_types-spicy:hover img:last-child {
+    display: block;  
+}
+  .catalog_grid_card_types-spicy:hover img:first-child {
+    display: none;  
+}
+
+.catalog_grid_card_types-hot img:last-child {
+    display: none;  
+}
+  .catalog_grid_card_types-hot:hover img:last-child {
+    display: block;  
+}
+  .catalog_grid_card_types-hot:hover img:first-child {
+    display: none;  
+}
+
+.catalog_grid_card_types-vegan img:last-child {
+    display: none;  
+}
+  .catalog_grid_card_types-vegan:hover img:last-child {
+    display: block;  
+}
+  .catalog_grid_card_types-vegan:hover img:first-child {
+    display: none;  
+}
+
+
+.catalog_grid_card_name{
+    color: #6B6B6B;
+    font-weight: 500;
+}
+
+.catalog_grid_card_count{
+    display: none;
+}
+
+.catalog_grid_card_cost{
+    display: flex;
+    gap: 8px;
+    justify-content: end;
+    align-items: center;
+    margin-top: 1rem;
+}
+
+.catalog_grid_card_cost-old {
+    color: #A0A0A0;
+    font-weight: 400;
+    font-size: 14px;
+}
+
+.catalog_grid_card_cost-button {
+    padding: 10px 24px 10px 24px;
+    background-color: #E9E6E6;
+    color: #274646;
+    border-radius: 46px;
+    font-weight: bold;
+    border: none;
+    text-align: center;
+    text-decoration: none;
+    font-size: 14px;
+    font-family: "ValueSansPro";
+    cursor: pointer;
+    
+
+}
+.catalog_grid_card_cost-button:hover {
+    background-color:#274646;
+    color: #FFFFFF;
+}
+
+.sushi-stripe{
+    background: linear-gradient(#FDC944,#F9B147);
+    color: #FFE091;
+}
+
+.pokebol-stripe{
+    background: linear-gradient(#003D3D,#001918);
+    color: #006666;
+}
+
+
+@keyframes rollsAnimBig {
+    0% {
+        transform: translate(0, 0);
+    }
+    100% {
+        transform: translate(-533.77px, 0);
+        
+    }
+}
+
+@keyframes sushiAnimBig {
+    0% {
+        transform: translate(0, 0);
+    }
+    100% {
+        transform: translate(-453.28px, 0)
+    }
+}
+
+@keyframes pokebolAnimBig {
+    0% {
+        transform: translate(0, 0);
+    }
+    100% {
+        transform: translate(-963.45px, 0)
+    }
+}
+
+@keyframes rollsAnimSmall {
+    0% {
+        transform: translate(0, 0);
+    }
+    100% {
+        transform: translate(-357.77px, 0);
+        
+    }
+}
+
+@keyframes sushiAnimSmall {
+    0% {
+        transform: translate(0, 0);
+    }
+    100% {
+        transform: translate(-295.97px, 0)
+    }
+}
+
+@keyframes pokebolAnimSmall {
+    0% {
+        transform: translate(0, 0);
+    }
+    100% {
+        transform: translate(-678.59px, 0)
+    }
+}
+
+ 
 
 /* Containers start */
 
@@ -231,13 +530,87 @@ body{
 @media (min-width: 768px) {
     .container {
         max-width: 720px;
+        padding: 0;
         
     }
 
-    .header-right {
-        display: flex;
+    .geolocation {
+        margin-left: 0;
     }
 
+    .right-header{
+        display: flex;
+        gap: 24px;
+        height: 100%;
+        align-items: center;
+    }
+
+
+    .stripe{
+        font-size: 80px;
+        height: 100px;
+        gap: 176px;
+    }
+    
+    
+    .stripe_text_rolls {
+        animation: rollsAnimBig 4s infinite linear;
+    }
+    
+    .stripe_text_sushi {
+        animation: sushiAnimBig 4s infinite linear;
+        
+    }
+    
+    .stripe_text_pokebol {
+        animation: pokebolAnimBig 4s infinite linear;
+        
+    }
+    
+    .catalog_grid {
+        display: grid;
+        grid-template-columns: repeat(2, 3fr);
+        gap: 32px 24px;
+    }
+
+
+    .catalog_grid_card{
+        border-radius: 8px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .catalog_grid_border {
+        display: none;
+    }
+
+    .catalog_grid_card:hover{
+        outline: 2px solid #F7F7F7;
+        border-radius: 8px;
+    }
+
+    .catalog_grid_card_image img {
+        width: 100%;
+        height: 100%;
+    }
+
+    .catalog_grid_card_information{
+        justify-content: space-between;
+    }
+    
+
+
+    .catalog_name {
+        font-size: 32px;
+    }
+
+    .catalog_grid_card_count{
+        display: block;
+        margin-top: 4px;
+        color: #757575;
+        font-weight: 400;
+        font-size: 14px;
+    }
 
     .logo{
         display: block;
@@ -247,42 +620,8 @@ body{
         display: none;
     }
 
-    .right-header{
-        margin-left: auto;
-        display: flex;
-        justify-content: space-between;
-        vertical-align:middle;
-        gap: 28px;
-        margin-top: auto;
-        margin-bottom: auto;
     
-    }
 
-    .left-header{
-        display: flex;
-        justify-content: space-between;
-        gap: 28px;
-        vertical-align:middle;
-        margin-top: auto;
-        margin-bottom: auto;
-        width: auto;
-        
-    }
-
-    .geolocation{
-        display: inline-block;
-        vertical-align:middle;
-        
-    }
-
-    .container-header{
-        display: flex;
-        justify-content: start;
-        align-items: center;
-        justify-content: center;
-        text-align: center;
-        height: 100%;
-    }
 }
 
 @media (min-width: 992px) {
@@ -297,11 +636,17 @@ body{
         font-size: 14px;
         text-decoration: none;
     }
+
 }
 
 @media (min-width: 1200px) {
     .container {
         max-width: 1140px;
+    }
+    .catalog_grid {
+        display: grid;
+        grid-template-columns: repeat(4, 3fr);
+        gap: 32px 24px;
     }
 }
 
@@ -309,5 +654,13 @@ body{
     .container {
         max-width: 1320px;
     }
+    /*.catalog_grid_card_image img {
+        max-width: 306px;
+        height: auto;
+    }*/
+
+    
+
+    
 }
 /* Containers end */
