@@ -28,9 +28,14 @@
 }
 
 .menu-button{
-    background-color: $green-color;
     cursor: pointer;
 }
+
+.menu-button img{
+    width: 24px;
+    height: 24px;
+}
+
 .logo{
     display: none;
 }
@@ -40,6 +45,7 @@
     display: none;
     font-size: 14px;
 }
+
 
 .address-label{
     color: #FFE091;
@@ -89,6 +95,7 @@
 .cart a{
     display: flex;
     align-items: center;
+    text-decoration: none;
 }
 
 .cart-label{
@@ -100,11 +107,14 @@
     height:18px;
     line-height: 18px;
     border-radius: 50%;
+    
+    
 }
 .cart-cost{
     color: #FFFFFF;
     font-size: 14px;
     white-space: nowrap;
+    display: flex;
 }
 
 .topnav {

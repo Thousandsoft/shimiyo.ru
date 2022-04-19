@@ -6,67 +6,144 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <LINK REL="stylesheet" TYPE="text/css" HREF="css/style.css">
     <title>SHIMIYO</title>
+    <script src="scripts/main.min.js"></script>
 </head>
 <body>
         <header class="header">
-            <div class="head">
-                <div class="container">
+            <div class="head" id="header_stripe">
+                <div class="container" id="container">
                     <div class="container-header">
                         <div class="left-header">
-                            <div class="menu-button" onclick="">
-                                <img src="images/menu-logo.png" alt="Site Name"/>
+                            <div class="menu-button" onclick="toggleMenu()" id="menuButton">
+                                <img src="images/menu-logo.svg" alt="Menu" id="menuButtonImage"/>
                             </div>
                             <div class="logo">
-                                <a href="#"><img src="images/logo.png" alt="Site Name" /></a>
+                                <a href="#"><img src="images/logo.svg" alt="Site Name" id="bigLogo"/></a>
                             </div>
                             <div class="mobile_logo">
-                                <a href="#"><img src="images/mobile-logo.png" alt="Site logo" /></a>
+                                <a href="#"><img src="images/mobile-logo.svg" alt="Site logo" id="mobileLogo"/></a>
                             </div>
-                            <div class="telephone-number">
+                            <div class="telephone-number" id="telephone">
                                 <a href="tel:+78127171919"> +7 812 717-19-19 </a>
                             </div>
                             <div class="geolocation">
-                                <a href="#"><img src="images/location-add.png"/><div class="address-label">Укажите адрес</div></a>
+                                <a href="#"><img src="images/location-add.svg" id="geo-image"/><div class="address-label" id="geo-label">Укажите адрес</div></a>
                             </div>
                         </div>
                         <div class="right-header">
                             <div class="shimings">
-                                <a href="#"><img src="images/shimings-image.png"/><div class="shimings-label">Шиминги</div></a>
+                                <a href="#"><img src="images/shimings-image.svg" id="shim-image"/><div class="shimings-label" id="shim-label">Шиминги</div></a>
                             </div>
                             <div class="cart">
-                                <a href="#"><img src="images/shopping-bag.png"/><div class="cart-label">12</div></a>
-                                <div class="cart-cost">
-                                    2 586 ₽
+                                <a href="#"><img src="images/shopping-bag.svg" id="shop-bag-image"/><div class="cart-label">0</div></a>
+                                <div class="cart-cost" id="cost-label">
+                                    0 <a>₽</a>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
+            <div class="content_menu" id="menu">
+                <!--<div class="container">-->
+                    <div class="content_menu_container">
+                            <div class="content_menu_left">
+                                <div class="content_menu_left_container">
+                                    <h3 class="content_menu_title">
+                                        меню
+                                    </h3>
+                                    <nav class="content_menu_left_nav topnav">
+                                    <!-- Nav Items -->
+                                    </nav>
+                                </div>
+                                <div class="content_menu_right">
+                                    <div class="footer_info">
+                                        <nav class="footer_info_nav">
+                                            <div class="footer_info_nav_item">
+                                                <a href="#signin">вход</a>
+                                                <hr>
+                                            </div>  
+                                            <div class="footer_info_nav_item">
+                                                <a href="#delivery">доставка</a>
+                                                <hr>
+                                            </div>  
+                                            <div class="footer_info_nav_item">
+                                                <a href="#">акции</a>
+                                                <hr>
+                                            </div>  
+                                            <div class="footer_info_nav_item">
+                                                <a href="#">отзывы</a>
+                                                <hr>
+                                            </div>  
+                                            <div class="footer_info_nav_item">
+                                                <a href="#contactus">связаться с нами</a>
+                                                <hr>
+                                            </div>  
+                                            <div class="footer_info_nav_item">
+                                                <a href="#about-us">о нас</a>
+                                                <hr>
+                                            </div>  
+                                            <div class="footer_info_nav_item">
+                                                <a href="#job">вакансии</a>
+                                                <hr>
+                                            </div> 
+                                        </nav>
+                                        <hr>
+                                        <div class="footer_info_logo">
+                                            <a href="#"><img src="images/mobile-logo.png" alt="Site logo"></a>
+                                        </div>
+                                        <div class="footer_info_mobile_logo">
+                                            <a href="#"><img src="images/logo.png" alt="Site logo"></a>
+                                        </div>
+                                        <div class="footer_info_socialmedia">
+                                            <a href="#" class="footer_info_social_media_icons">
+                                                <img src="images/Instagram.svg" alt="Instagram">
+                                                <img src="images/Instagram_hover.svg" alt="Instagram">
+                                            </a>
+                                            <a href="#" class="footer_info_social_media_icons">
+                                                <img src="images/WhatsApp.svg" alt="WhatsApp">
+                                                <img src="images/WhatsApp_hover.svg" alt="WhatsApp">
+                                            </a>
+                                            <a href="#" class="footer_info_social_media_icons">
+                                                <img src="images/Telegram.svg" alt="Telegram">
+                                                <img src="images/Telegram_hover.svg" alt="Telegram">
+                                            </a>
+                                            <a href="#" class="footer_info_social_media_icons">
+                                                <img src="images/VK_.svg" alt="VK">
+                                                <img src="images/VK_hover.svg" alt="VK">
+                                            </a>
+                                        </div>   
+                                        </div>
+                                    </div>
+                            </div>
+                            
+                    </div>
+            </div>
+               <!--</div>--> 
             <div class="container">
-            <nav class="topnav">
-                <a href="#new">Новинки</a>
-                <a href="#rolls">Роллы</a>
-                <a href="#sushi">Суши</a>
-                <a href="#decerts">Десерты</a>
-                <a href="#zakuski">Закуски</a>
-                <a href="#sets">Наборы</a>
-                <a href="#pokeandbowl">Поке и боулы</a>
-                <a href="#wok">Воки</a>
-                <a href="#authors">Авторское</a>
-                <a href="#onigiri">Онигири</a>
-                <a href="#toppings">Топпинги</a>
-            </nav>
-        </div>
-        <div class="container">
-            <nav class="recent-bar">
-                <a href="#classic" class="active">классические</a>
-                <a href="#fried">опалённые</a>
-                <a href="#baked">запечённые</a>
-                <a href="#mini">мини</a>
-                <a href="#tempura">темпура</a>
-            </nav>
-        </div>
+                <nav class="topnav">
+                    <a href="#new">Новинки</a>
+                    <a href="#rolls">Роллы</a>
+                    <a href="#sushi">Суши</a>
+                    <a href="#decerts">Десерты</a>
+                    <a href="#zakuski">Закуски</a>
+                    <a href="#sets">Наборы</a>
+                    <a href="#pokeandbowl">Поке и боулы</a>
+                    <a href="#wok">Воки</a>
+                    <a href="#authors">Авторское</a>
+                    <a href="#onigiri">Онигири</a>
+                    <a href="#toppings">Топпинги</a>
+                </nav>
+            </div>
+            <div class="container">
+                <nav class="recent-bar">
+                    <a href="#classic" class="active">классические</a>
+                    <a href="#fried">опалённые</a>
+                    <a href="#baked">запечённые</a>
+                    <a href="#mini">мини</a>
+                    <a href="#tempura">темпура</a>
+                </nav>
+            </div>
         </header>
         <main class="content">
             <div class="container">
@@ -1170,6 +1247,6 @@
                 </div>
             </div>
         </footer>
-    <script src="scripts/main.min.js"></script>
+    
 </body>
 </html>
