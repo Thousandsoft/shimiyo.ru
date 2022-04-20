@@ -21,6 +21,7 @@ let basketAddButton = document.querySelectorAll('.catalog_grid_card_cost-button'
 });
 
 
+
 /*const baseUrl = "https://raw.githubusercontent.com/centerwebpro/sunweb_projects_1/main/accepts/data.json";
             
             let categoryList = fetch(baseUrl)
@@ -41,8 +42,31 @@ let basketAddButton = document.querySelectorAll('.catalog_grid_card_cost-button'
                     }
                 }
 
+                
+
 */
-                var btn = document.getElementById("menuButton");
+
+
+
+
+/*var menuBtn = document.getElementById("mobileButton");
+menuBtn.addEventListener("click", function() {
+    openMobileMenu()
+}, false);
+
+function openMobileMenu() {
+        
+   if(document.getElementById('contentMenu').style.width < "150%") {
+        document.getElementById('contentMenu').style.width = "150%";
+    } else {
+        document.getElementById('contentMenu').style.width = "0px";
+    }
+      
+}*/
+                
+
+
+             var btn = document.getElementById("menuButton");
                 btn.addEventListener("click", function() {
                     toggleMenu()
                 }, false);

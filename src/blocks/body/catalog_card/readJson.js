@@ -8,14 +8,16 @@ export function readJson() {
         });
 
     function setNavLinks(data) {
-        let navBlock = document.querySelector('.topnav');
-        if (navBlock) {
-            Object.entries(data).forEach(item => {
-                if (item[1].status == true) {
-                    let navElenet = `<a href="#" class="topnav-item">${item[1].name}</a>`;
-                    navBlock.innerHTML += navElenet;
-                }
-            })
-        }
+        let navBlock = document.querySelectorAll('.topnav');
+        navBlock.forEach(block => {
+            if (block) {
+                Object.entries(data).forEach(item => {
+                    if (item[1].status == true) {
+                        let navElenet = `<a href="#" class="topnav-item">${item[1].name}</a>`;
+                        block.innerHTML += navElenet;
+                    }
+                })
+            }
+        })
     }
 }

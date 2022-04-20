@@ -1,15 +1,22 @@
 
 
-@media (max-width: 576px) {
-    @import '../blocks/container/container_576px.scss';
+/*@media (max-width: 576px) {
+    
 }
 
 @media (min-width: 576px) {
-    @import '../blocks/container/container_576px.scss';
-}
+    
+}*/
 
 @media (min-width: 768px) {
-    @import '../blocks/container/container_768px.scss';
+
+    .content_menu_mobile_stripe {
+        display: none;
+    }
+
+    .content_menu_left_container h3{
+        display: block;
+    }
 
     .geolocation {
         margin-left: 0;
@@ -120,7 +127,6 @@
 }
 
 @media (min-width: 992px) {
-    @import '../blocks/container/container_992px.scss';
     .telephone-number{
         display: block;
     }
@@ -130,16 +136,15 @@
         text-decoration: none;
     }
 
-}
-
-@media (min-width: 1200px) {
-    @import '../blocks/container/container_1200px.scss';
     .catalog_grid {
         display: grid;
         grid-template-columns: repeat(4, 3fr);
-        gap: 32px 24px;
     }
 
+}
+
+@media (min-width: 1200px) {
+    
     .footer_about {
         flex-direction: row;
     }
@@ -154,9 +159,7 @@
     }
 }
 
-@media (min-width:1400px) {
+/*@media (min-width:1400px) {
     
-    @import '../blocks/container/container_1400px.scss';
     
-}
-/* Containers end */
+}*/
