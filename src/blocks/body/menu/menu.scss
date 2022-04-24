@@ -9,6 +9,8 @@
 .content_menu_mobile_stripe {
     position: fixed;
     width: 47px;
+    padding-top: 32px;
+    font-weight: 500;
 }
 
 .content_menu_mobile_stripe span{
@@ -66,6 +68,7 @@
     margin-top:0
 }
 
+
 /////////
 
 article,
@@ -107,8 +110,8 @@ aside {
   /* Checkbox hack to toggle nav visibility */
   
   input ~ .mobile_nav {
-    margin-left: -144px;
+    margin-left: 51px;
   }
   input:checked ~ .mobile_nav {
-    margin-left: 51px;
+    margin-left: -144px;
   }

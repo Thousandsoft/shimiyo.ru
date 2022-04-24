@@ -14,6 +14,13 @@
         display: none;
     }
 
+    input ~ .mobile_nav {
+        margin-left: 51px;
+      }
+      input:checked ~ .mobile_nav {
+        margin-left: 51px;
+      }
+
     .content_menu_left_container h3{
         display: block;
     }
