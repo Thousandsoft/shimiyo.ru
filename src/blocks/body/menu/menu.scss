@@ -3,7 +3,47 @@
     position: absolute;
     width: 100%;
     background-color: white;
-    box-shadow: inset 0px 4px 12px rgba(0, 0, 0, 0.15);
+    box-shadow: inset 0px 4px 12px rgba(0, 0, 0, 0.15);  
+    animation: 0.5s ease-out;
+}
+
+@keyframes showMenuAnim {
+  0% {
+      display: none;
+      opacity: 0;
+  }
+
+  1% {
+      display: block;
+      opacity: 0;
+  }
+
+  100% {
+      display: block;
+      opacity: 1;
+  }
+}
+
+@keyframes hideMenuAnim {
+  0% {
+    display: block;
+    opacity: 1;
+  }
+
+  1% {
+    display: block;
+    opacity: 1;
+  }
+
+  100% {
+    display: none;
+    opacity: 0;
+  }
+}
+
+.content_menu.change {
+  opacity: 1;
+  transition: opacity 0.5s ease-in-out;
 }
 
 .content_menu_mobile_stripe {
@@ -86,7 +126,7 @@ aside {
     display: flex;
     flex-direction: row;
     flex: 1;
-    overflow: hidden;
+    //overflow: hidden;
     height: 100%;
     box-shadow: inset 0px 4px 12px rgba(0, 0, 0, 0.15);
   }

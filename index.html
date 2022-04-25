@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <LINK REL="stylesheet" TYPE="text/css" HREF="css/style.css">
     <title>SHIMIYO</title>
-    <script src="scripts/main.min.js"></script>
 </head>
 <body>
         <header class="header">
@@ -14,7 +13,7 @@
                 <div class="container" id="container">
                     <div class="container-header">
                         <div class="left-header">
-                            <div class="menu-button" onclick="toggleMenu()" id="menuButton">
+                            <div class="menu-button"  id="menuButton">
                                 <img src="images/menu-logo.svg" alt="Menu" id="menuButtonImage"/>
                             </div>
                             <div class="logo">
@@ -35,7 +34,7 @@
                                 <a href="#"><img src="images/shimings-image.svg" id="shim-image"/><div class="shimings-label" id="shim-label">Шиминги</div></a>
                             </div>
                             <div class="cart">
-                                <a href="#"><img src="images/shopping-bag.svg" id="shop-bag-image"/><div class="cart-label">0</div></a>
+                                <a href="#showCart" id="cart-label"><img src="images/shopping-bag.svg" id="shop-bag-image"/><div class="cart-label">0</div></a>
                                 <div class="cart-cost" id="cost-label">
                                     0 <a>₽</a>
                                 </div>
@@ -46,7 +45,7 @@
             </div>
             <div class="content_menu" id="menu">
                 <div class="content_menu_mobile_stripe">
-                    <label class="mobile_button" for="toggle" onclick="toggleMobileMenu()" id="mobile_menu_button">
+                    <label class="mobile_button" for="toggle" id="mobile_menu_button">
                         <img src="images/arrow-active.svg" id="mobile-button-image"/>
                         <span class="content_menu_mobile_title" id="mobile-button-text">меню</span>
                     </label>
@@ -124,9 +123,14 @@
                     </div>
             </div>
             <div class="container">
-                <nav class="topnav">
-                    <!--Nav Items -->
-                </nav>
+                <div class="header_top">
+                    <div class="header_cart" id="cart">
+                    
+                    </div>
+                    <nav class="topnav">
+                        <!--Nav Items -->
+                    </nav>
+                </div>
             </div>
             <div class="container">
                 <nav class="recent-bar">
@@ -140,29 +144,29 @@
         </header>
         <main class="content">
             <div class="container">
-                <div class="stories">
-                    <div class="story">
+                <div class="stories" id="stories-element">
+                    <div class="story" id="story-element">
                         <a href="#"><img src="images/story-image.svg" alt="Story"/></a>
                     </div>
-                    <div class="story">
+                    <div class="story" id="story-element">
                         <a href="#"><img src="images/story-image.svg" alt="Story"/></a>
                     </div>
-                    <div class="story">
+                    <div class="story" id="story-element">
                         <a href="#"><img src="images/story-image.svg" alt="Story"/></a>
                     </div>
-                    <div class="story">
+                    <div class="story" id="story-element">
                         <a href="#"><img src="images/story-image.svg" alt="Story"/></a>
                     </div>
-                    <div class="story">
+                    <div class="story" id="story-element">
                         <a href="#"><img src="images/story-image.svg" alt="Story"/></a>
                     </div>
-                    <div class="story">
+                    <div class="story" id="story-element">
                         <a href="#"><img src="images/story-image.svg" alt="Story"/></a>
                     </div>
-                    <div class="story">
+                    <div class="story" id="story-element">
                         <a href="#"><img src="images/story-image.svg" alt="Story"/></a>
                     </div>
-                    <div class="story">
+                    <div class="story" id="story-element">
                         <a href="#"><img src="images/story-image.svg" alt="Story"/></a>
                     </div>
                 </div>
@@ -193,310 +197,7 @@
                         классические
                     </h2>
                     <div class="catalog_grid">
-
-                        <div class="catalog_grid_card">
-                            <div class="catalog_grid_card_images">
-                                <div class="catalog_grid_cald_types">
-                                    <div class="catalog_grid_card_types-spicy">
-                                        <img src="images/Spicy.svg" class="spicy-image" alt="Spicy"/>
-                                        <img src="images/spicy_hover.svg" class="spicy-image_hover" alt="Spicy"/>
-                                    </div>
-                                    <div class="catalog_grid_card_types-hot">
-                                        <img src="images/Hot.svg" class="hot-image" alt="Hot"/>
-                                        <img src="images/hot_hover.svg" class="hot-image_hover" alt="Hot"/>
-                                    </div>
-                                    <div class="catalog_grid_card_types-vegan">
-                                        <img src="images/Vegan.svg" class="vegan-image" alt="Vegan"/>
-                                        <img src="images/vegan_hover.svg" class="vegan-image_hover" alt="Vegan"/>
-                                    </div>  
-                                </div>
-                                <div class="catalog_grid_card_image">
-                                    <img src="images/roll.svg" alt="Roll"/>
-                                </div>
-                            </div>
-                            <div class="catalog_grid_card_information">
-                                <div class="catalog_grid_card_information_title">
-                                    <div class="catalog_grid_card_name">
-                                        Филадельфия люкс
-                                    </div>
-                                    <div class="catalog_grid_card_count">
-                                        8 шт./350 гр.
-                                    </div>
-                                </div>
-                                <div class="catalog_grid_card_cost">
-                                    <div class="catalog_grid_card_cost-old">
-                                        <del>10 000 ₽</del>
-                                    </div>
-                                    <button class="catalog_grid_card_cost-button">1 925 ₽</button>
-                                </div>
-                            </div>
-                        </div>
-                        <hr class="catalog_grid_border">
-                        <div class="catalog_grid_card">
-                            <div class="catalog_grid_card_images">
-                                <div class="catalog_grid_cald_types">
-                                    <div class="catalog_grid_card_types-spicy">
-                                        <img src="images/Spicy.svg" class="spicy-image" alt="Spicy"/>
-                                        <img src="images/spicy_hover.svg" class="spicy-image_hover" alt="Spicy"/>
-                                    </div>
-                                    <div class="catalog_grid_card_types-hot">
-                                        <img src="images/Hot.svg" class="hot-image" alt="Hot"/>
-                                        <img src="images/hot_hover.svg" class="hot-image_hover" alt="Hot"/>
-                                    </div>
-                                    <div class="catalog_grid_card_types-vegan">
-                                        <img src="images/Vegan.svg" class="vegan-image" alt="Vegan"/>
-                                        <img src="images/vegan_hover.svg" class="vegan-image_hover" alt="Vegan"/>
-                                    </div>  
-                                </div>
-                                <div class="catalog_grid_card_image">
-                                    <img src="images/roll.svg" alt="Roll"/>
-                                </div>
-                            </div>
-                            <div class="catalog_grid_card_information">
-                                <div class="catalog_grid_card_information_title">
-                                    <div class="catalog_grid_card_name">
-                                        Филадельфия люкс
-                                    </div>
-                                    <div class="catalog_grid_card_count">
-                                        8 шт./350 гр.
-                                    </div>
-                                </div>
-                                <div class="catalog_grid_card_cost">
-                                    <div class="catalog_grid_card_cost-old">
-                                        <del>10 000 ₽</del>
-                                    </div>
-                                    <button class="catalog_grid_card_cost-button">1 925 ₽</button>
-                                </div>
-                            </div>
-                        </div>
-                        <hr class="catalog_grid_border">
-                        <div class="catalog_grid_card">
-                            <div class="catalog_grid_card_images">
-                                <div class="catalog_grid_cald_types">
-                                    <div class="catalog_grid_card_types-spicy">
-                                        <img src="images/Spicy.svg" class="spicy-image" alt="Spicy"/>
-                                        <img src="images/spicy_hover.svg" class="spicy-image_hover" alt="Spicy"/>
-                                    </div>
-                                    <div class="catalog_grid_card_types-hot">
-                                        <img src="images/Hot.svg" class="hot-image" alt="Hot"/>
-                                        <img src="images/hot_hover.svg" class="hot-image_hover" alt="Hot"/>
-                                    </div>
-                                    <div class="catalog_grid_card_types-vegan">
-                                        <img src="images/Vegan.svg" class="vegan-image" alt="Vegan"/>
-                                        <img src="images/vegan_hover.svg" class="vegan-image_hover" alt="Vegan"/>
-                                    </div>  
-                                </div>
-                                <div class="catalog_grid_card_image">
-                                    <img src="images/roll.svg" alt="Roll"/>
-                                </div>
-                            </div>
-                            <div class="catalog_grid_card_information">
-                                <div class="catalog_grid_card_information_title">
-                                    <div class="catalog_grid_card_name">
-                                        Филадельфия люкс
-                                    </div>
-                                    <div class="catalog_grid_card_count">
-                                        8 шт./350 гр.
-                                    </div>
-                                </div>
-                                <div class="catalog_grid_card_cost">
-                                    <div class="catalog_grid_card_cost-old">
-                                        <del>10 000 ₽</del>
-                                    </div>
-                                    <button class="catalog_grid_card_cost-button">1 925 ₽</button>
-                                </div>
-                            </div>
-                        </div>
-                        <hr class="catalog_grid_border">
-                        <div class="catalog_grid_card">
-                            <div class="catalog_grid_card_images">
-                                <div class="catalog_grid_cald_types">
-                                    <div class="catalog_grid_card_types-spicy">
-                                        <img src="images/Spicy.svg" class="spicy-image" alt="Spicy"/>
-                                        <img src="images/spicy_hover.svg" class="spicy-image_hover" alt="Spicy"/>
-                                    </div>
-                                    <div class="catalog_grid_card_types-hot">
-                                        <img src="images/Hot.svg" class="hot-image" alt="Hot"/>
-                                        <img src="images/hot_hover.svg" class="hot-image_hover" alt="Hot"/>
-                                    </div>
-                                    <div class="catalog_grid_card_types-vegan">
-                                        <img src="images/Vegan.svg" class="vegan-image" alt="Vegan"/>
-                                        <img src="images/vegan_hover.svg" class="vegan-image_hover" alt="Vegan"/>
-                                    </div>  
-                                </div>
-                                <div class="catalog_grid_card_image">
-                                    <img src="images/roll.svg" alt="Roll"/>
-                                </div>
-                            </div>
-                            <div class="catalog_grid_card_information">
-                                <div class="catalog_grid_card_information_title">
-                                    <div class="catalog_grid_card_name">
-                                        Филадельфия люкс
-                                    </div>
-                                    <div class="catalog_grid_card_count">
-                                        8 шт./350 гр.
-                                    </div>
-                                </div>
-                                <div class="catalog_grid_card_cost">
-                                    <div class="catalog_grid_card_cost-old">
-                                        <del>10 000 ₽</del>
-                                    </div>
-                                    <button class="catalog_grid_card_cost-button">1 925 ₽</button>
-                                </div>
-                            </div>
-                        </div>
-                        <hr class="catalog_grid_border">
-                        <div class="catalog_grid_card">
-                            <div class="catalog_grid_card_images">
-                                <div class="catalog_grid_cald_types">
-                                    <div class="catalog_grid_card_types-spicy">
-                                        <img src="images/Spicy.svg" class="spicy-image" alt="Spicy"/>
-                                        <img src="images/spicy_hover.svg" class="spicy-image_hover" alt="Spicy"/>
-                                    </div>
-                                    <div class="catalog_grid_card_types-hot">
-                                        <img src="images/Hot.svg" class="hot-image" alt="Hot"/>
-                                        <img src="images/hot_hover.svg" class="hot-image_hover" alt="Hot"/>
-                                    </div>
-                                    <div class="catalog_grid_card_types-vegan">
-                                        <img src="images/Vegan.svg" class="vegan-image" alt="Vegan"/>
-                                        <img src="images/vegan_hover.svg" class="vegan-image_hover" alt="Vegan"/>
-                                    </div>  
-                                </div>
-                                <div class="catalog_grid_card_image">
-                                    <img src="images/roll.svg" alt="Roll"/>
-                                </div>
-                            </div>
-                            <div class="catalog_grid_card_information">
-                                <div class="catalog_grid_card_information_title">
-                                    <div class="catalog_grid_card_name">
-                                        Филадельфия люкс
-                                    </div>
-                                    <div class="catalog_grid_card_count">
-                                        8 шт./350 гр.
-                                    </div>
-                                </div>
-                                <div class="catalog_grid_card_cost">
-                                    <div class="catalog_grid_card_cost-old">
-                                        <del>10 000 ₽</del>
-                                    </div>
-                                    <button class="catalog_grid_card_cost-button">1 925 ₽</button>
-                                </div>
-                            </div>
-                        </div>
-                        <hr class="catalog_grid_border">
-                        <div class="catalog_grid_card">
-                            <div class="catalog_grid_card_images">
-                                <div class="catalog_grid_cald_types">
-                                    <div class="catalog_grid_card_types-spicy">
-                                        <img src="images/Spicy.svg" class="spicy-image" alt="Spicy"/>
-                                        <img src="images/spicy_hover.svg" class="spicy-image_hover" alt="Spicy"/>
-                                    </div>
-                                    <div class="catalog_grid_card_types-hot">
-                                        <img src="images/Hot.svg" class="hot-image" alt="Hot"/>
-                                        <img src="images/hot_hover.svg" class="hot-image_hover" alt="Hot"/>
-                                    </div>
-                                    <div class="catalog_grid_card_types-vegan">
-                                        <img src="images/Vegan.svg" class="vegan-image" alt="Vegan"/>
-                                        <img src="images/vegan_hover.svg" class="vegan-image_hover" alt="Vegan"/>
-                                    </div>  
-                                </div>
-                                <div class="catalog_grid_card_image">
-                                    <img src="images/roll.svg" alt="Roll"/>
-                                </div>
-                            </div>
-                            <div class="catalog_grid_card_information">
-                                <div class="catalog_grid_card_information_title">
-                                    <div class="catalog_grid_card_name">
-                                        Филадельфия люкс
-                                    </div>
-                                    <div class="catalog_grid_card_count">
-                                        8 шт./350 гр.
-                                    </div>
-                                </div>
-                                <div class="catalog_grid_card_cost">
-                                    <div class="catalog_grid_card_cost-old">
-                                        <del>10 000 ₽</del>
-                                    </div>
-                                    <button class="catalog_grid_card_cost-button">1 925 ₽</button>
-                                </div>
-                            </div>
-                        </div>
-                        <hr class="catalog_grid_border">
-                        <div class="catalog_grid_card">
-                            <div class="catalog_grid_card_images">
-                                <div class="catalog_grid_cald_types">
-                                    <div class="catalog_grid_card_types-spicy">
-                                        <img src="images/Spicy.svg" class="spicy-image" alt="Spicy"/>
-                                        <img src="images/spicy_hover.svg" class="spicy-image_hover" alt="Spicy"/>
-                                    </div>
-                                    <div class="catalog_grid_card_types-hot">
-                                        <img src="images/Hot.svg" class="hot-image" alt="Hot"/>
-                                        <img src="images/hot_hover.svg" class="hot-image_hover" alt="Hot"/>
-                                    </div>
-                                    <div class="catalog_grid_card_types-vegan">
-                                        <img src="images/Vegan.svg" class="vegan-image" alt="Vegan"/>
-                                        <img src="images/vegan_hover.svg" class="vegan-image_hover" alt="Vegan"/>
-                                    </div>  
-                                </div>
-                                <div class="catalog_grid_card_image">
-                                    <img src="images/roll.svg" alt="Roll"/>
-                                </div>
-                            </div>
-                            <div class="catalog_grid_card_information">
-                                <div class="catalog_grid_card_information_title">
-                                    <div class="catalog_grid_card_name">
-                                        Филадельфия люкс
-                                    </div>
-                                    <div class="catalog_grid_card_count">
-                                        8 шт./350 гр.
-                                    </div>
-                                </div>
-                                <div class="catalog_grid_card_cost">
-                                    <div class="catalog_grid_card_cost-old">
-                                        <del>10 000 ₽</del>
-                                    </div>
-                                    <button class="catalog_grid_card_cost-button">1 925 ₽</button>
-                                </div>
-                            </div>
-                        </div>
-                        <hr class="catalog_grid_border">
-                        <div class="catalog_grid_card">
-                            <div class="catalog_grid_card_images">
-                                <div class="catalog_grid_cald_types">
-                                    <div class="catalog_grid_card_types-spicy">
-                                        <img src="images/Spicy.svg" class="spicy-image" alt="Spicy"/>
-                                        <img src="images/spicy_hover.svg" class="spicy-image_hover" alt="Spicy"/>
-                                    </div>
-                                    <div class="catalog_grid_card_types-hot">
-                                        <img src="images/Hot.svg" class="hot-image" alt="Hot"/>
-                                        <img src="images/hot_hover.svg" class="hot-image_hover" alt="Hot"/>
-                                    </div>
-                                    <div class="catalog_grid_card_types-vegan">
-                                        <img src="images/Vegan.svg" class="vegan-image" alt="Vegan"/>
-                                        <img src="images/vegan_hover.svg" class="vegan-image_hover" alt="Vegan"/>
-                                    </div>  
-                                </div>
-                                <div class="catalog_grid_card_image">
-                                    <img src="images/roll.svg" alt="Roll"/>
-                                </div>
-                            </div>
-                            <div class="catalog_grid_card_information">
-                                <div class="catalog_grid_card_information_title">
-                                    <div class="catalog_grid_card_name">
-                                        Филадельфия люкс
-                                    </div>
-                                    <div class="catalog_grid_card_count">
-                                        8 шт./350 гр.
-                                    </div>
-                                </div>
-                                <div class="catalog_grid_card_cost">
-                                    <div class="catalog_grid_card_cost-old">
-                                        <del>10 000 ₽</del>
-                                    </div>
-                                    <button class="catalog_grid_card_cost-button">1 925 ₽</button>
-                                </div>
-                            </div>
-                        </div>
+                        <!--CARDS-->
                         <hr class="catalog_grid_border">
                     </div>    
                 </section>
@@ -1240,6 +941,6 @@
                 </div>
             </div>
         </footer>
-    
+        <script src="scripts/main.min.js"></script>
 </body>
 </html>

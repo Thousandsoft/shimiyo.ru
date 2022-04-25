@@ -32,6 +32,11 @@
 
 .footer_info_nav_item hr{
     display: none;
+    transition-delay: 1s;
+}
+
+.footer_info_nav_item {
+    transition-delay: 1s;
 }
 
 .footer_info_nav_item:hover{
@@ -40,6 +45,7 @@
     color: $pink-color;
     justify-content: center;
     align-items: center;
+    
 }
 .footer_info_nav_item:hover hr{
     display: block;

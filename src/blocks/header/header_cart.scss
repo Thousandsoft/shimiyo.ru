@@ -1,0 +1,18 @@
+.header_cart{
+    display: none;
+    position: absolute;
+    width: 200px;
+    height: 300px;
+    background-color: white;
+    box-shadow: inset 0px 4px 12px rgba(0, 0, 0, 0.15);  
+    right: 0;
+    color: $green-color;
+}
+
+.header_top{
+    position: relative;
+}
+
+#showCart:target {
+    display:block;
+}

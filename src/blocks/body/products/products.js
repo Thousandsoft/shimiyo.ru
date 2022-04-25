@@ -5,7 +5,7 @@ export default products = [
         title: 'Филадельфия люкс',
         description: '8 шт./350 гр.',
         oldPrice: 10000,
-        img: './src/images/card-product.svg'
+        img: './images/roll.svg'
     },
     {
         id: 2,
@@ -13,7 +13,7 @@ export default products = [
         title: 'product_2',
         description: '8 шт./350 гр.',
         oldPrice: 10000,
-        img: './src/images/card-product.svg'
+        img: './images/roll.svg'
     },
     {
         id: 3,
@@ -21,7 +21,7 @@ export default products = [
         title: 'product_3',
         description: '8 шт./350 гр.',
         oldPrice: 10000,
-        img: './src/images/card-product.svg'
+        img: './images/roll.svg'
     },
     {
         id: 4,
@@ -29,7 +29,7 @@ export default products = [
         title: 'product_4',
         description: '8 шт./350 гр.',
         oldPrice: 10000,
-        img: './src/images/card-product.svg'
+        img: './images/roll.svg'
     },
     {
         id: 5,
@@ -37,6 +37,6 @@ export default products = [
         title: 'product_5',
         description: '8 шт./350 гр.',
         oldPrice: 10000,
-        img: './src/images/card-product.svg'
+        img: './images/roll.svg'
     },
 ]

@@ -1,4 +1,5 @@
 /*MARK: HEADER*/
+@import './header_cart.scss';
 
 .header {
     position: fixed;
@@ -9,6 +10,7 @@
     background-color: #FFFFFF;
     z-index: 10;
 }
+
 .head {
     background-color: $green-color;
     height: 54px;
