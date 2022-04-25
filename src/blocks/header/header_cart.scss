@@ -1,12 +1,15 @@
 .header_cart{
     display: none;
     position: absolute;
-    width: 200px;
-    height: 300px;
-    background-color: white;
-    box-shadow: inset 0px 4px 12px rgba(0, 0, 0, 0.15);  
+    width: 300px;
+    height: 400px;;
+    background-color: white; 
     right: 0;
     color: $green-color;
+}
+
+.header_cart_container{
+    padding: 8px;
 }
 
 .header_top{
@@ -15,4 +18,67 @@
 
 #showCart:target {
     display:block;
+}
+
+.header_cart_item {
+    display: flex;
+    gap: 8px;
+}
+
+.header_cart_item_name {
+    flex: 1;
+}
+
+.header_cart_item_count {
+    flex: 1;
+    text-align: center;
+}
+//////
+.flex-table {
+    display: flex;
+    flex-direction: column;
+    background: #fff;
+    box-shadow: inset 0px 4px 12px rgba(0, 0, 0, 0.15); 
+}
+.flex-table thead {
+    color: $pink-color;
+    background: $green-color;
+}
+.flex-table thead tr,
+.flex-table tbody tr {
+    display: flex;
+}
+.flex-table thead tr th,
+.flex-table tbody tr td {
+    display: flex;
+    flex: 1;
+    padding: .5em;
+}
+@media screen and (max-width: 640px) {
+    .flex-table {
+        border: 0;
+    }
+    .flex-table thead {
+        display: none;
+    }
+    .flex-table tbody tr {
+        flex-direction: column;
+        margin: 1em;
+    }
+    .flex-table tbody tr td {
+        flex-direction: column;
+    }
+    .flex-table tbody tr td:before {
+        display: flex;
+        align-items: center;
+        margin: -.5em -.5em .75em -.5em;
+        padding: .5em;
+        content: attr(data-label);
+        color: $pink-color;
+        background: $green-color;;
+    }
+}
+.flex-fixhead-table tbody {
+    overflow: auto;
+    height: 50vh;
 }
