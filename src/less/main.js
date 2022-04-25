@@ -1,3 +1,5 @@
+import '../less/style.scss'
+
 
 const baseUrl = "https://raw.githubusercontent.com/centerwebpro/sunweb_projects_1/main/accepts/data.json";
             

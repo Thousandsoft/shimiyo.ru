@@ -1,0 +1,162 @@
+
+
+@media (max-width: 576px) {
+    @import '../blocks/container/container_576px.scss';
+}
+
+@media (min-width: 576px) {
+    @import '../blocks/container/container_576px.scss';
+}
+
+@media (min-width: 768px) {
+    @import '../blocks/container/container_768px.scss';
+
+    .geolocation {
+        margin-left: 0;
+    }
+
+    .right-header{
+        display: flex;
+        gap: 24px;
+        height: 100%;
+        align-items: center;
+    }
+
+    .stripe{
+        font-size: 80px;
+        height: 100px;
+        gap: 176px;
+    }
+    
+    .stripe_text_rolls {
+        animation: rollsAnimBig 4s infinite linear;
+    }
+    
+    .stripe_text_sushi {
+        animation: sushiAnimBig 4s infinite linear;
+        
+    }
+    
+    .stripe_text_pokebol {
+        animation: pokebolAnimBig 4s infinite linear;
+        
+    }
+    
+    .catalog_grid {
+        display: grid;
+        grid-template-columns: repeat(2, 3fr);
+        gap: 32px 24px;
+    }
+
+    .catalog_grid_card{
+        border-radius: 8px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .catalog_grid_border {
+        display: none;
+    }
+
+    .catalog_grid_card:hover{
+        outline: 2px solid #F7F7F7;
+        border-radius: 8px;
+    }
+
+    .catalog_grid_card_image img {
+        width: 100%;
+        height: 100%;
+    }
+
+    .catalog_grid_card_information{
+        justify-content: space-between;
+    }
+
+    .catalog_name {
+        font-size: 32px;
+    }
+
+    .catalog_grid_card_count{
+        display: block;
+        margin-top: 4px;
+        color: #757575;
+        font-weight: 400;
+        font-size: 14px;
+    }
+
+    .logo{
+        display: block;
+    }
+
+    .mobile_logo {
+        display: none;
+    }
+
+    .footer_about_left_container {
+        flex-direction: row;
+    }
+
+    .footer_about_left {
+        justify-content: start;
+        align-items: center;
+    }
+
+    .footer_about_right {
+        padding-right: 60px;
+    }
+
+    .footer_info_logo {
+        display: block;
+    }
+
+    .footer_info_mobile_logo {
+        display: none;
+    }
+
+    .footer_info hr{
+        width: 400px;
+    }
+
+}
+
+@media (min-width: 992px) {
+    @import '../blocks/container/container_992px.scss';
+    .telephone-number{
+        display: block;
+    }
+    .telephone-number a {
+        color: #A0A0A0;
+        font-size: 14px;
+        text-decoration: none;
+    }
+
+}
+
+@media (min-width: 1200px) {
+    @import '../blocks/container/container_1200px.scss';
+    .catalog_grid {
+        display: grid;
+        grid-template-columns: repeat(4, 3fr);
+        gap: 32px 24px;
+    }
+
+    .footer_about {
+        flex-direction: row;
+    }
+
+    .footer_about_right {
+        padding-top: 0px;
+        
+    }
+
+    .footer_about_left {
+        justify-content: start;
+    }
+}
+
+@media (min-width:1400px) {
+    
+    @import '../blocks/container/container_1400px.scss';
+    
+}
+/* Containers end */

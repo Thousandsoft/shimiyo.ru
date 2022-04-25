@@ -1,0 +1,256 @@
+/*MARK: BODY*/
+
+@import '../body/stripe/stripe_font.scss';
+@import '../blocks/container/mobile_container.scss';
+@import '../body/stripe/stripe_keyframes.scss';
+
+.content{
+    display: block;
+    width: 100%;
+    padding-top: 174px;
+}
+
+.stories{
+    display: flex;
+    gap: 16px;
+    width: 100%;
+    overflow-x: auto;
+    overflow-y: hidden;
+    white-space: nowrap;
+    height: 320px;
+}
+
+.stories::-webkit-scrollbar-track
+{
+	border-radius: 2px;
+	background-color: #F5F5F5;
+    
+}
+
+.stories::-webkit-scrollbar
+{
+    height: 2px;
+	background-color: #E5E5E5;
+    
+}
+
+.stories::-webkit-scrollbar-thumb
+{
+	border-radius: 16px;
+	background-color: #A0A0A0;
+}
+
+
+.story{
+    border-radius: 16px;
+    height: 284px;
+    width: 160px;
+}
+
+
+.story img{
+   
+    height: 100%;
+    border: double 2px transparent;
+    border-radius: 16px;
+    background-image: linear-gradient(white, white), 
+                    linear-gradient(#F7BDC7,#F293A2);
+    background-origin: border-box;
+    background-clip: padding-box, border-box;
+    padding: 2px;
+}
+
+.story :hover img{
+   
+    height: 100%;
+    border: double 2px transparent;
+    border-radius: 16px;
+    background-image: linear-gradient(white, white), 
+                    linear-gradient(#E9E6E6,#E9E6E6);
+    background-origin: border-box;
+    background-clip: padding-box, border-box;
+    padding: 2px;
+}
+
+
+.stripe{
+    display: flex;
+    font-size: 60px;
+    width: 100%;
+    height: 80px;
+    background: linear-gradient(#F7BDC7,#F293A2);
+    margin-top: 48px;
+    color: #FFD8E1;
+    white-space: nowrap;
+    overflow: hidden;
+    gap: 88px;
+    justify-content: start;
+    align-items: center;
+    text-align: center;
+}
+
+
+.stripe_text_rolls {
+    padding-bottom: 20px;
+    animation: rollsAnimSmall 4s infinite linear;
+    font-family: "RimmaSansBold"; 
+    font-weight: bold;
+}
+
+
+.stripe_text_sushi {
+    animation: sushiAnimSmall 4s infinite linear;
+    font-family: "RimmaSansBold"; 
+    font-weight: bold;
+    padding-bottom: 20px;
+}
+
+.stripe_text_pokebol {
+    animation: pokebolAnimSmall 4s infinite linear;
+    font-family: "RimmaSansBold"; 
+    font-weight: bold;
+    padding-bottom: 20px;
+}
+
+
+.catalog {
+    font-family: "ValueSansPro";
+}
+
+.catalog_name {
+    font-size: 24px;
+    color: $green-color;
+    font-weight: 500;
+    margin: 0;
+    padding-top: 64px;
+    padding-bottom: 32px;
+}
+
+.catalog_grid {
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+.catalog_grid_border{
+    width:100%;
+    border: 1px solid #E5E5E5;
+    
+}
+
+.catalog_grid_card{
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    padding: 16px;
+    
+}
+.catalog_grid_card_information{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+}
+
+.catalog_grid_card_images{
+    position: relative;
+}
+
+.catalog_grid_card_image img{
+    width: 136px;
+    height: 99px;
+}
+
+.catalog_grid_cald_types{
+    position: absolute;
+    top: 0;
+    display: flex;
+    gap: 8px;
+    height: 24px;
+}
+
+.catalog_grid_cald_types img{
+    width: 24px;
+    height: 24px;
+}
+
+.catalog_grid_card_types-spicy img:last-child {
+    display: none;  
+}
+  .catalog_grid_card_types-spicy:hover img:last-child {
+    display: block;  
+}
+  .catalog_grid_card_types-spicy:hover img:first-child {
+    display: none;  
+}
+
+.catalog_grid_card_types-hot img:last-child {
+    display: none;  
+}
+  .catalog_grid_card_types-hot:hover img:last-child {
+    display: block;  
+}
+  .catalog_grid_card_types-hot:hover img:first-child {
+    display: none;  
+}
+
+.catalog_grid_card_types-vegan img:last-child {
+    display: none;  
+}
+  .catalog_grid_card_types-vegan:hover img:last-child {
+    display: block;  
+}
+  .catalog_grid_card_types-vegan:hover img:first-child {
+    display: none;  
+}
+
+
+.catalog_grid_card_name{
+    color: #6B6B6B;
+    font-weight: 500;
+}
+
+.catalog_grid_card_count{
+    display: none;
+}
+
+.catalog_grid_card_cost{
+    display: flex;
+    gap: 8px;
+    justify-content: end;
+    align-items: center;
+    margin-top: 1rem;
+}
+
+.catalog_grid_card_cost-old {
+    color: #A0A0A0;
+    font-weight: 400;
+    font-size: 14px;
+}
+
+.catalog_grid_card_cost-button {
+    padding: 10px 24px 10px 24px;
+    background-color: #E9E6E6;
+    color: $green-color;
+    border-radius: 46px;
+    font-weight: bold;
+    border: none;
+    text-align: center;
+    text-decoration: none;
+    font-size: 14px;
+    font-family: "ValueSansPro";
+    cursor: pointer;
+}
+.catalog_grid_card_cost-button:hover {
+    background-color:$green-color;
+    color: #FFFFFF;
+}
+
+.sushi-stripe{
+    background: linear-gradient(#FDC944,#F9B147);
+    color: #FFE091;
+}
+
+.pokebol-stripe{
+    background: linear-gradient(#003D3D,#001918);
+    color: #006666;
+}

@@ -1,0 +1,58 @@
+
+/*Stripe text move keyframes*/
+
+@keyframes rollsAnimBig {
+    0% {
+        transform: translate(0, 0);
+    }
+    100% {
+        transform: translate(-533.77px, 0);
+        
+    }
+}
+
+@keyframes sushiAnimBig {
+    0% {
+        transform: translate(0, 0);
+    }
+    100% {
+        transform: translate(-453.28px, 0)
+    }
+}
+
+@keyframes pokebolAnimBig {
+    0% {
+        transform: translate(0, 0);
+    }
+    100% {
+        transform: translate(-963.45px, 0)
+    }
+}
+
+@keyframes rollsAnimSmall {
+    0% {
+        transform: translate(0, 0);
+    }
+    100% {
+        transform: translate(-357.77px, 0);
+        
+    }
+}
+
+@keyframes sushiAnimSmall {
+    0% {
+        transform: translate(0, 0);
+    }
+    100% {
+        transform: translate(-295.97px, 0)
+    }
+}
+
+@keyframes pokebolAnimSmall {
+    0% {
+        transform: translate(0, 0);
+    }
+    100% {
+        transform: translate(-678.59px, 0)
+    }
+}

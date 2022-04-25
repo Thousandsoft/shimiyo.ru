@@ -1,0 +1,6 @@
+@import '../blocks/common/common.scss'; //Tag <body>
+@import '../less/variables.scss';       //variables (colors, etc.)
+@import '../blocks/header/header.scss'; //Tag <header>
+@import '../blocks/body/body.scss';     //body (Tag <main>)
+@import '../blocks/footer/footer.scss'; //Tag <footer>
+@import '../blocks/media/media.scss';   //@media
