@@ -33,6 +33,9 @@ export default basket = {
                 this.summ += parseInt(product.quantity) * parseFloat(databaseProduct.price); 
             }
         })
-        document.querySelector('.cart-cost').innerHTML = this.summ;
+        document.querySelector('.cart-cost').innerHTML =  this._numberWithSpaces(this.summ);
+    },
+    _numberWithSpaces(x) {
+        return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ");
     }
 }
