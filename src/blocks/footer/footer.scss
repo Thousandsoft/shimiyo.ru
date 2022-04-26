@@ -12,7 +12,7 @@
     padding-bottom: 64px;
 }
 
-.footer_info hr{
+.footer_info_line{
     background-color: $pink-color;
     width: 211px;
 }
@@ -28,35 +28,38 @@
 .footer_info_nav a{
     text-decoration: none;
     color: #F7F7F7;
-}
-
-.footer_info_nav_item hr{
-    display: none;
-    transition-delay: 1s;
-}
-
-.footer_info_nav_item {
-    transition-delay: 1s;
-}
-
-.footer_info_nav_item:hover{
-    display: flex;
-    gap: 8px;
-    color: $pink-color;
-    justify-content: center;
-    align-items: center;
     
 }
-.footer_info_nav_item:hover hr{
-    display: block;
-    width: 8px;
-    height: 4px;
-    border: none;
-    margin: 0;
-}
-.footer_info_nav_item:hover a{
+
+.footer_info_nav a {
+    text-decoration: none;
+    position: relative;
+    padding: .5rem 0;
+    color: #F7F7F7;
+  }
+  
+  .nav-button-icon {
+    position: absolute;
+    transform: translateX(14px);
+    opacity: 0;
+    transition: all .2s ease;
+  }
+  
+  .nav-button-text {
+    display: inline-block;
+    transition: padding-right .2s ease;
+  }
+  
+  .footer_info_nav a:hover .nav-button-text {
+    padding-right: 8px;
     color: $pink-color;
-}
+  }
+  
+  .footer_info_nav a:hover .nav-button-icon {
+    transform: translateX(0);
+    color: $pink-color;
+    opacity: 1;
+  }
 
 
 .footer_info_logo {
@@ -77,6 +80,11 @@
     height: 32px;
     width: 32px;
 }
+
+.footer_info_social_media_icons {
+    transition: all .3s ease;
+}
+
 
 
 .footer_info_social_media_icons img:last-child {
@@ -143,3 +151,5 @@
 .footer_about_right_text_white{
     color: white;
 }
+
+/////

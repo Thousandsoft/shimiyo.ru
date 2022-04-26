@@ -38,7 +38,7 @@
                                 <div class="cart-cost" id="cost-label">
                                     0
                                 </div>
-                                <span>₽</span>
+                                <span id="cart_ruble-symbol">₽</span>
                             </div>
                         </div>
                     </div>
@@ -64,36 +64,64 @@
                             <div class="content_menu_right">
                                 <div class="menu_info footer_info">
                                     <nav class="footer_info_nav">
-                                        <div class="footer_info_nav_item">
-                                            <a href="#signin">вход</a>
-                                            <hr>
-                                        </div>  
-                                        <div class="footer_info_nav_item">
-                                            <a href="#delivery">доставка</a>
-                                            <hr>
-                                        </div>  
-                                        <div class="footer_info_nav_item">
-                                            <a href="#">акции</a>
-                                            <hr>
-                                        </div>  
-                                        <div class="footer_info_nav_item">
-                                            <a href="#">отзывы</a>
-                                            <hr>
-                                        </div>  
-                                        <div class="footer_info_nav_item">
-                                            <a href="#contactus">связаться с нами</a>
-                                            <hr>
-                                        </div>  
-                                        <div class="footer_info_nav_item">
-                                            <a href="#about-us">о нас</a>
-                                            <hr>
-                                        </div>  
-                                        <div class="footer_info_nav_item">
-                                            <a href="#job">вакансии</a>
-                                            <hr>
-                                        </div> 
+                                        <a href="#" class="footer_info_nav_item nav-button nav-size-sm">
+                                            <span class="nav-button-content-wrapper">
+                                                <span class="nav-button-text">вход</span>
+                                                <span class="nav-button-icon nav-align-icon-right">
+                                                    -
+                                                </span>
+                                            </span>
+                                        </a>
+                                        <a href="#" class="footer_info_nav_item nav-button nav-size-sm">
+                                            <span class="nav-button-content-wrapper">
+                                                <span class="nav-button-text">доставка</span>
+                                                <span class="nav-button-icon nav-align-icon-right">
+                                                    -
+                                                </span>
+                                            </span>
+                                        </a>
+                                        <a href="#" class="footer_info_nav_item nav-button nav-size-sm">
+                                            <span class="nav-button-content-wrapper">
+                                                <span class="nav-button-text">акции</span>
+                                                <span class="nav-button-icon nav-align-icon-right">
+                                                    -
+                                                </span>
+                                            </span>
+                                        </a>
+                                        <a href="#" class="footer_info_nav_item nav-button nav-size-sm">
+                                            <span class="nav-button-content-wrapper">
+                                                <span class="nav-button-text">отзывы</span>
+                                                <span class="nav-button-icon nav-align-icon-right">
+                                                    -
+                                                </span>
+                                            </span>
+                                        </a>
+                                        <a href="#" class="footer_info_nav_item nav-button nav-size-sm">
+                                            <span class="nav-button-content-wrapper">
+                                                <span class="nav-button-text">связаться с нами</span>
+                                                <span class="nav-button-icon nav-align-icon-right">
+                                                    -
+                                                </span>
+                                            </span>
+                                        </a>
+                                        <a href="#" class="footer_info_nav_item nav-button nav-size-sm">
+                                            <span class="nav-button-content-wrapper">
+                                                <span class="nav-button-text">о нас</span>
+                                                <span class="nav-button-icon nav-align-icon-right">
+                                                    -
+                                                </span>
+                                            </span>
+                                        </a>
+                                        <a href="#" class="footer_info_nav_item nav-button nav-size-sm">
+                                            <span class="nav-button-content-wrapper">
+                                                <span class="nav-button-text">вакансии</span>
+                                                <span class="nav-button-icon nav-align-icon-right">
+                                                    -
+                                                </span>
+                                            </span>
+                                        </a>
                                     </nav>
-                                    <hr>
+                                    <hr class="footer_info_line">
                                     <div class="footer_info_logo">
                                         <a href="#"><img src="images/mobile-logo.png" alt="Site logo"></a>
                                     </div>
@@ -188,6 +216,18 @@
             </div>
         </header>
         <main class="content">
+            <div class="mobile_cart_wrapper">
+                <div class="mobile_cart">
+                    <a href="#showCart" id="cart-label"><img src="images/shopping-bag.svg" id="shop-bag-image"/><div class="cart-label">0</div></a>
+                    <span>Корзина</span> 
+                    <div class="mobile_cart_cost_label">
+                        <div class="cart-cost" id="cost-label">
+                            0
+                        </div>
+                        <span id="cart_ruble-symbol">₽</span>
+                    </div>
+                </div>
+            </div>
             <div class="container">
                 <div class="stories" id="stories-element">
                     <div class="story" id="story-element">
@@ -912,36 +952,64 @@
         <footer>
             <div class="footer_info">
                 <nav class="footer_info_nav">
-                    <div class="footer_info_nav_item">
-                        <a href="#signin">вход</a>
-                        <hr>
-                    </div>  
-                    <div class="footer_info_nav_item">
-                        <a href="#delivery">доставка</a>
-                        <hr>
-                    </div>  
-                    <div class="footer_info_nav_item">
-                        <a href="#">акции</a>
-                        <hr>
-                    </div>  
-                    <div class="footer_info_nav_item">
-                        <a href="#">отзывы</a>
-                        <hr>
-                    </div>  
-                    <div class="footer_info_nav_item">
-                        <a href="#contactus">связаться с нами</a>
-                        <hr>
-                    </div>  
-                    <div class="footer_info_nav_item">
-                        <a href="#about-us">о нас</a>
-                        <hr>
-                    </div>  
-                    <div class="footer_info_nav_item">
-                        <a href="#job">вакансии</a>
-                        <hr>
-                    </div> 
+                    <a href="#" class="footer_info_nav_item nav-button nav-size-sm">
+                        <span class="nav-button-content-wrapper">
+                            <span class="nav-button-text">вход</span>
+                            <span class="nav-button-icon nav-align-icon-right">
+                                -
+                            </span>
+                        </span>
+                    </a>
+                    <a href="#" class="footer_info_nav_item nav-button nav-size-sm">
+                        <span class="nav-button-content-wrapper">
+                            <span class="nav-button-text">доставка</span>
+                            <span class="nav-button-icon nav-align-icon-right">
+                                -
+                            </span>
+                        </span>
+                    </a>
+                    <a href="#" class="footer_info_nav_item nav-button nav-size-sm">
+                        <span class="nav-button-content-wrapper">
+                            <span class="nav-button-text">акции</span>
+                            <span class="nav-button-icon nav-align-icon-right">
+                                -
+                            </span>
+                        </span>
+                    </a>
+                    <a href="#" class="footer_info_nav_item nav-button nav-size-sm">
+                        <span class="nav-button-content-wrapper">
+                            <span class="nav-button-text">отзывы</span>
+                            <span class="nav-button-icon nav-align-icon-right">
+                                -
+                            </span>
+                        </span>
+                    </a>
+                    <a href="#" class="footer_info_nav_item nav-button nav-size-sm">
+                        <span class="nav-button-content-wrapper">
+                            <span class="nav-button-text">связаться с нами</span>
+                            <span class="nav-button-icon nav-align-icon-right">
+                                -
+                            </span>
+                        </span>
+                    </a>
+                    <a href="#" class="footer_info_nav_item nav-button nav-size-sm">
+                        <span class="nav-button-content-wrapper">
+                            <span class="nav-button-text">о нас</span>
+                            <span class="nav-button-icon nav-align-icon-right">
+                                -
+                            </span>
+                        </span>
+                    </a>
+                    <a href="#" class="footer_info_nav_item nav-button nav-size-sm">
+                        <span class="nav-button-content-wrapper">
+                            <span class="nav-button-text">вакансии</span>
+                            <span class="nav-button-icon nav-align-icon-right">
+                                -
+                            </span>
+                        </span>
+                    </a>
                 </nav>
-                <hr>
+                <hr class="footer_info_line">
                 <div class="footer_info_logo">
                     <a href="#"><img src="images/mobile-logo.png" alt="Site logo"></a>
                 </div>

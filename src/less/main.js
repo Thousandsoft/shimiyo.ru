@@ -16,10 +16,10 @@ products_rendering();
 storiesScroll();
 
 
+
 let basketAddButton = document.querySelectorAll('.catalog_grid_card_cost-button').forEach(item => {
     item.addEventListener('click', function (e) {
         basket.add(e.target.getAttribute('product_id'));
-        
     })
 });
 

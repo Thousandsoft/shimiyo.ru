@@ -16,6 +16,7 @@ export default basket = {
         }
         this._calculateQuantity();
         this._calculateSumm();
+        _setCartData(products);
         console.log(this.products);
     },
     _calculateQuantity() {
@@ -37,5 +38,14 @@ export default basket = {
     },
     _numberWithSpaces(x) {
         return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ");
+    },
+
+    getCartData(){
+        return JSON.parse(localStorage.getItem('products') || "[]");
+    },
+      
+    setCartData(o){
+        localStorage.setItem('products', JSON.stringify(o));
+        return false;
     }
 }

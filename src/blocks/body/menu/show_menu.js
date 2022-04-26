@@ -23,7 +23,8 @@ export function toggleMenu() {
 
   let shopBagImage = document.getElementById('shop-bag-image');
   let costLabel = document.getElementById('cost-label');
-
+  let rubleSymbol = document.getElementById('cart_ruble-symbol');
+  
   
 
 
@@ -43,6 +44,7 @@ export function toggleMenu() {
 
     shopBagImage.src = "./images/shopping-bag.svg";
     costLabel.style.color = 'white';
+    rubleSymbol.style.color = 'white';
     menu.style.animationName = "hideMenuAnim";
     menu.style.display = 'none';
     
@@ -68,6 +70,7 @@ export function toggleMenu() {
 
     shopBagImage.src = "./images/shopping-bag-green.svg";
     costLabel.style.color = "#274646";
+    rubleSymbol.style.color = "#274646";
 
     menuButtonImage.src = "./images/cross.svg";
 
