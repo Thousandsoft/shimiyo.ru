@@ -40,6 +40,7 @@ export default () => {
                                 </div>
                             </div>
                         </div>
+                        <hr class="catalog_grid_border">
     `
     })
 }
