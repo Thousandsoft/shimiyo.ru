@@ -31,12 +31,31 @@
     flex: 1;
     text-align: center;
 }
+
+.header_cart_clear_button_wrapper {
+    width: 100%;
+    background-color: white;
+}
+
+.header_cart_clear_button {
+    width: 100%;
+    background-color: white;
+    color: $green-color;
+    font-weight: bold;
+    border: none;
+    text-align: center;
+    text-decoration: none;
+    font-size: 14px;
+    font-family: "ValueSansPro";
+    cursor: pointer;
+}
 //////
 .flex-table {
     display: flex;
     flex-direction: column;
     background: #fff;
     box-shadow: inset 0px 4px 12px rgba(0, 0, 0, 0.15); 
+    height: 100%;
 }
 .flex-table thead {
     color: $pink-color;

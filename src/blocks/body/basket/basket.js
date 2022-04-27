@@ -1,5 +1,7 @@
 import products from "../products/products.js"
 
+//import products from "../products/products";
+
 export default basket = {
     quantity: 0,
     summ: 0,
@@ -16,15 +18,18 @@ export default basket = {
         }
         this._calculateQuantity();
         this._calculateSumm();
-        _setCartData(products);
-        console.log(this.products);
+        this._setCartData(this.products);
+        this._refreshCart();
     },
     _calculateQuantity() {
         this.quantity = 0;
         this.products.forEach(product => {
             this.quantity += product.quantity
         })
-        document.querySelector('.cart-label').innerHTML = this.quantity;
+        let cartLabel = document.querySelectorAll('.cart-label');
+        for (let label of cartLabel) {
+            label.innerHTML =  this.quantity;
+        }
     },
     _calculateSumm() {
         this.summ = 0;
@@ -34,18 +39,49 @@ export default basket = {
                 this.summ += parseInt(product.quantity) * parseFloat(databaseProduct.price); 
             }
         })
-        document.querySelector('.cart-cost').innerHTML =  this._numberWithSpaces(this.summ);
+        let cartCost = document.querySelectorAll('.cart-cost');
+        for (let cost of cartCost) {
+            cost.innerHTML =  this._numberWithSpaces(this.summ);
+        }
     },
     _numberWithSpaces(x) {
         return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ");
     },
 
-    getCartData(){
-        return JSON.parse(localStorage.getItem('products') || "[]");
+    _getCartData(){
+        this.products = JSON.parse(localStorage.getItem('products') || "[]");
+        if (products != []){
+            this._calculateQuantity();
+            this._calculateSumm();
+            this._refreshCart();
+        }
     },
       
-    setCartData(o){
+    _setCartData(o){
         localStorage.setItem('products', JSON.stringify(o));
         return false;
+    },
+
+    _deleteCartData(){
+        localStorage.clear();
+        this.products = [];
+        this._calculateQuantity();
+        this._calculateSumm();
+        this._refreshCart();
+    },
+
+    _refreshCart() {
+        let cartContent = document.querySelector('.flex-table tbody');
+        cartContent.innerHTML = ``;
+        this.products.forEach(product => {
+            let prodFromJson = products.find(c => c.id == product.id);
+            cartContent.innerHTML += `
+            <tr>
+                <td data-label="Name">${prodFromJson .title}</td>
+                <td data-label="Quantity">${product.quantity}</td>
+                <td data-label="Sum">${prodFromJson .price * product.quantity}</td>
+            </tr>
+        `;
+        })
     }
 }

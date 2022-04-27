@@ -10,23 +10,23 @@ export default products = [
     {
         id: 2,
         price: 1535,
-        title: 'product_2',
+        title: 'Калифорния',
         description: '8 шт./350 гр.',
-        oldPrice: 10000,
+        oldPrice: 2000,
         img: './images/roll.svg'
     },
     {
         id: 3,
         price: 4856,
-        title: 'product_3',
+        title: 'Айролл',
         description: '8 шт./350 гр.',
-        oldPrice: 10000,
+        oldPrice: 5000,
         img: './images/roll.svg'
     },
     {
         id: 4,
         price: 4452,
-        title: 'product_4',
+        title: 'Фудзи',
         description: '8 шт./350 гр.',
         oldPrice: 10000,
         img: './images/roll.svg'
@@ -34,7 +34,7 @@ export default products = [
     {
         id: 5,
         price: 564,
-        title: 'product_5',
+        title: 'Фри темпура',
         description: '8 шт./350 гр.',
         oldPrice: 10000,
         img: './images/roll.svg'

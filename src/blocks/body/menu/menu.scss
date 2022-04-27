@@ -100,6 +100,7 @@
 }
 
 .content_menu_right {
+    min-width: 350px;
     width: 100%;
     height: 100%;
     background-color: $green-color;
@@ -110,17 +111,13 @@
     margin-top:0
 }
 
-
-/////////
-
-article,
-aside {
+.content_menu_right_wrapper {
   height: 97%;
   box-sizing: border-box
 }
 
 .mobile_nav {
-    height: 100%;
+  height: 100%;
   box-sizing: border-box
 }
 
@@ -128,33 +125,23 @@ aside {
     display: flex;
     flex-direction: row;
     flex: 1;
-    //overflow: hidden;
     height: 100%;
     box-shadow: inset 0px 4px 12px rgba(0, 0, 0, 0.15);
   }
-  article {
+ .content_menu_right_wrapper {
+    transition: all 0.5s ease;
+    width: 20%;
     flex: 1;
-    min-width: 350px;
   }
 
   .mobile_nav {
-    flex: 0 0 12em;
-    transition: margin 0.3s ease;
+    transition: all 0.5s ease;
     padding-top: 48px;
-    
   }
-
-  
-  aside {
-    /* 12em is the width of the sidebars */
-    flex: 0 0 12em;
-    transition: margin 0.3s ease;
-  }
-  /* Checkbox hack to toggle nav visibility */
   
   input ~ .mobile_nav {
     margin-left: 51px;
-    flex: 0 0 18em;
+    width: 80%;
   }
   input:checked ~ .mobile_nav {
     margin-left: -144px;

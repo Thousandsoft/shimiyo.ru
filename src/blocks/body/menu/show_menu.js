@@ -21,9 +21,15 @@ export function toggleMenu() {
   let shimingsImage = document.getElementById('shim-image');
   let shimingsLabel = document.getElementById('shim-label');
 
-  let shopBagImage = document.getElementById('shop-bag-image');
-  let costLabel = document.getElementById('cost-label');
+  let shopBagImages = document.getElementsByClassName("cart-image");
+  
   let rubleSymbol = document.getElementById('cart_ruble-symbol');
+
+  let mobileCartBackGround = document.getElementById('mobile-cart');
+
+  let cartLabels = document.getElementsByClassName("cart-cost");
+  
+
   
   
 
@@ -42,13 +48,21 @@ export function toggleMenu() {
     shimingsImage.src = "./images/shimings-image.svg";
     shimingsLabel.style.color = "#FFBDC8";
 
-    shopBagImage.src = "./images/shopping-bag.svg";
-    costLabel.style.color = 'white';
+    for(let i = 0; i < shopBagImages.length; i++) {
+      shopBagImages[i].src = "./images/shopping-bag.svg";
+   }
+    
+    for(let i = 0; i < cartLabels.length; i++) {
+      cartLabels[i].style.color = 'white';
+   }
     rubleSymbol.style.color = 'white';
     menu.style.animationName = "hideMenuAnim";
     menu.style.display = 'none';
     
     menuButtonImage.src = "./images/menu-logo.svg";
+
+    mobileCartBackGround.style.backgroundColor = "#274646";
+    mobileCartBackGround.style.color = 'white';
 
   }
   else {
@@ -68,11 +82,20 @@ export function toggleMenu() {
     shimingsImage.src = "./images/shimings-logo-green.svg";
     shimingsLabel.style.color = "#006666";
 
-    shopBagImage.src = "./images/shopping-bag-green.svg";
-    costLabel.style.color = "#274646";
+    for(let i = 0; i < shopBagImages.length; i++) {
+      shopBagImages[i].src = "./images/shopping-bag-green.svg";
+   }
+
+    for(let i = 0; i < cartLabels.length; i++) {
+      cartLabels[i].style.color = "#274646";
+   }
     rubleSymbol.style.color = "#274646";
 
     menuButtonImage.src = "./images/cross.svg";
+
+    mobileCartBackGround.style.backgroundColor = "#FFBDC8";
+    mobileCartBackGround.style.color = "#274646";
+    
 
   }
 }
