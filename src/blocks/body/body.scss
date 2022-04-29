@@ -4,6 +4,10 @@
 @import '../body/stripe/stripe_keyframes.scss';
 @import '../body/menu/menu.scss';
 
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 200px;
+}
 .content{
     display: block;
     width: 100%;

@@ -136,6 +136,7 @@
     display:none;
 }
 
+
 .topnav a {
     display: flex;
     color: $green-color;
@@ -148,13 +149,15 @@
     transition: all .2s ease;
 }
 
+
+
 .topnav a:hover {
     border-bottom: 3px solid $pink-color;
 }
 
 .topnav a.active {
-    border-bottom: 3px solid $green-color;
-}
+    border-bottom: 3px solid $green-color;  
+  }
 
 .recent-bar{
     display: flex;

@@ -78,8 +78,8 @@ export default basket = {
             cartContent.innerHTML += `
             <tr>
                 <td data-label="Name">${prodFromJson .title}</td>
-                <td data-label="Quantity">${product.quantity}</td>
-                <td data-label="Sum">${prodFromJson .price * product.quantity}</td>
+                <td data-label="Quantity" class="cart-quantity">${product.quantity}</td>
+                <td data-label="Sum" class="cart-table-price">${prodFromJson .price * product.quantity}</td>
             </tr>
         `;
         })
