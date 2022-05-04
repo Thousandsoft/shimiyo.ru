@@ -5,7 +5,9 @@ export function readJson() {
         .then(response => response.json())
         .then(data => {
             setNavLinks(data);
-        });
+        })
+        .catch(error => alert("Не удалось загрузить данные! Ошибка: " + error.message));
+
 
     function setNavLinks(data) {
         let navBlock = document.querySelectorAll('.topnav');

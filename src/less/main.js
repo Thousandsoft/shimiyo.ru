@@ -2,7 +2,6 @@ import '../less/style.scss'
 
 
 import {readJson} from '../blocks/body/catalog_card/readJson.js';
-/*import {categoryLodad} from './category_animate.js';*/
 import {showMenu} from '../blocks/header/header_menu.js';;
 import products from '../blocks/body/products/products.js';
 import basket from '../blocks/body/basket/basket.js';
@@ -12,14 +11,12 @@ import {toggleMenu} from '../blocks/body/menu/show_menu.js';
 import {toggleMobileMenu} from '../blocks/body/menu/show_mobile_menu';
 import {showCart} from '../blocks/header/show_cart.js';
 import {selectNavItem} from '../blocks/header/topnav_select.js';
+
+
 readJson()
 products_rendering();
 storiesScroll();
-
-//topnavSelect();
-
 basket._getCartData();
-
 
 
 let topnavButtons = document.querySelectorAll('.topnav').forEach(item => {
@@ -27,10 +24,6 @@ let topnavButtons = document.querySelectorAll('.topnav').forEach(item => {
     selectNavItem(e);
   })
 });
-
-function addActive(el){
-  document.querySelector(el).classList.add("active");
-}
 
 let basketAddButton = document.querySelectorAll('.catalog_grid_card_cost-button').forEach(item => {
     item.addEventListener('click', function (e) {

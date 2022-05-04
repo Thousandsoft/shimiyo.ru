@@ -1,7 +1,5 @@
 import products from "../products/products.js"
 
-//import products from "../products/products";
-
 export default basket = {
     quantity: 0,
     summ: 0,
@@ -27,9 +25,10 @@ export default basket = {
             this.quantity += product.quantity
         })
         let cartLabel = document.querySelectorAll('.cart-label');
-        for (let label of cartLabel) {
+        let cartLabelArray = [...cartLabel];
+        cartLabelArray.forEach(label => {
             label.innerHTML =  this.quantity;
-        }
+        });
     },
     _calculateSumm() {
         this.summ = 0;
@@ -40,12 +39,13 @@ export default basket = {
             }
         })
         let cartCost = document.querySelectorAll('.cart-cost');
-        for (let cost of cartCost) {
+        let cartCostArray = [...cartCost];
+        cartCostArray.forEach(cost => {
             cost.innerHTML =  this._numberWithSpaces(this.summ);
-        }
+        });
     },
-    _numberWithSpaces(x) {
-        return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ");
+    _numberWithSpaces(number) {
+        return number.toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ");
     },
 
     _getCartData(){
@@ -57,14 +57,16 @@ export default basket = {
         }
     },
       
-    _setCartData(o){
-        localStorage.setItem('products', JSON.stringify(o));
+    _setCartData(object){
+        localStorage.setItem('products', JSON.stringify(object));
         return false;
     },
 
     _deleteCartData(){
         localStorage.clear();
         this.products = [];
+        this.summ = 0;
+        this.quantity = 0;
         this._calculateQuantity();
         this._calculateSumm();
         this._refreshCart();
