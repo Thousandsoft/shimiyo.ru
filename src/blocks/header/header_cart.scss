@@ -1,0 +1,157 @@
+.header_cart{
+    display: none;
+    position: absolute;
+    width: 400px;
+    background-color: white; 
+    right: 0;
+    color: $green-color;
+    box-shadow: inset 0px 4px 12px rgba(0, 0, 0, 0.15); 
+    border-radius: 16px;
+}
+
+.header_cart_container{
+    padding: 8px;
+}
+
+
+#showCart:target {
+    display:block;
+}
+
+.header_cart_item {
+    display: flex;
+    gap: 8px;
+}
+
+.header_cart_item_name {
+    flex: 1;
+}
+
+.header_cart_item_count {
+    flex: 1;
+    text-align: center;
+}
+
+.header_cart_clear_button_wrapper {
+    padding: 0.5rem;
+}
+
+.header_cart_clear_button {
+    width: 100%;
+    background-color: $green-color;
+    color: white;
+    font-weight: bold;
+    border: none;
+    text-align: center;
+    text-decoration: none;
+    font-size: 14px;
+    font-family: "ValueSansPro";
+    cursor: pointer;
+    padding: 1rem;
+    border-radius: 46px;
+    transition: all .2s ease;
+}
+
+.header_cart_clear_button:hover {
+    background-color: white;
+    color: $green-color;
+    box-shadow: inset 0px 4px 12px rgba(0, 0, 0, 0.15);
+
+}
+
+.flex-table {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+
+.flex-table thead {
+    color: $pink-color;
+    background: $green-color;
+}
+.flex-table thead tr,
+.flex-table tbody tr {
+    display: flex;
+    width: 100%;
+    padding-top: 8px;
+}
+
+.flex-table tbody tr td {
+    
+}
+
+.flex-table tbody button{
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    background: $green-color;
+    color: white;
+    cursor: pointer;
+    border-radius: 50%;
+    transition: all .2s ease;
+}
+
+.flex-table tbody button:hover{
+    background:  white;;
+    color: $green-color;
+}
+
+
+
+.flex-table thead tr{
+    display: flex;
+    width: 100%;
+    padding: .5em;
+}
+
+.flex-table thead th{
+    margin: auto;
+}
+
+.cart-quantity  {
+    text-align: center;
+    margin-left: auto;
+}
+
+.cart-quantity span{
+    padding-left: 8px;
+    padding-right: 8px;
+}
+
+.cart-table-price {
+    text-align: center;
+    margin-left: 20%;
+}
+
+.flex-fixhead-table tbody {
+    padding-left: 1rem;
+    padding-right: 1rem;
+    height: 50vh;
+}
+
+@media screen and (max-width: 640px) {
+    .flex-table {
+        border: 0;
+    }
+    .flex-table thead {
+        display: none;
+    }
+    .flex-table tbody tr {
+        flex-direction: column;
+        margin: 1em;
+    }
+    .flex-table tbody tr td {
+        flex-direction: column;
+    }
+    .flex-table tbody tr td:before {
+        display: flex;
+        align-items: center;
+        margin: -.5em -.5em .75em -.5em;
+        padding: .5em;
+        content: attr(data-label);
+        color: $pink-color;
+        background: $green-color;;
+    }
+}
+

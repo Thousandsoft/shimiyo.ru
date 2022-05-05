@@ -1,4 +1,5 @@
 /*MARK: HEADER*/
+@import './header_cart.scss';
 
 .header {
     position: fixed;
@@ -9,6 +10,7 @@
     background-color: #FFFFFF;
     z-index: 10;
 }
+
 .head {
     background-color: $green-color;
     height: 54px;
@@ -28,9 +30,14 @@
 }
 
 .menu-button{
-    background-color: $green-color;
     cursor: pointer;
 }
+
+.menu-button img{
+    width: 24px;
+    height: 24px;
+}
+
 .logo{
     display: none;
 }
@@ -40,6 +47,7 @@
     display: none;
     font-size: 14px;
 }
+
 
 .address-label{
     color: #FFE091;
@@ -84,11 +92,14 @@
     display: flex;
     align-items: center;
     gap: 8px;
+    color: #FFFFFF;
+    font-size: 14px;
 }
 
 .cart a{
     display: flex;
     align-items: center;
+    text-decoration: none;
 }
 
 .cart-label{
@@ -100,12 +111,17 @@
     height:18px;
     line-height: 18px;
     border-radius: 50%;
+    
+    
 }
 .cart-cost{
     color: #FFFFFF;
     font-size: 14px;
     white-space: nowrap;
+    display: flex;
 }
+
+
 
 .topnav {
     display: flex;
@@ -114,12 +130,12 @@
     overflow: auto;
     white-space: nowrap;
     border-bottom: 1px solid #E5E5E5;
-    background-color: #FFFFFF;
-}   
+}
 
 .topnav::-webkit-scrollbar {
     display:none;
 }
+
 
 .topnav a {
     display: flex;
@@ -130,6 +146,7 @@
     text-decoration: none;
     font-size: 16px;
     border-bottom: 3px solid transparent;
+    transition: all .2s ease;
 }
 
 .topnav a:hover {
@@ -137,8 +154,8 @@
 }
 
 .topnav a.active {
-    border-bottom: 3px solid $green-color;
-}
+    border-bottom: 3px solid $green-color;  
+  }
 
 .recent-bar{
     display: flex;

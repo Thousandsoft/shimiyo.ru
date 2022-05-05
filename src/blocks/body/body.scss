@@ -1,13 +1,52 @@
 /*MARK: BODY*/
 
 @import '../body/stripe/stripe_font.scss';
-@import '../blocks/container/mobile_container.scss';
 @import '../body/stripe/stripe_keyframes.scss';
+@import '../body/menu/menu.scss';
 
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 200px;
+}
 .content{
     display: block;
     width: 100%;
     padding-top: 174px;
+    margin-bottom: 64px;
+}
+
+.mobile_cart_wrapper {
+    position: fixed;
+    width: 100%;
+    z-index: 10;
+    bottom: 38px;
+}
+
+.mobile_cart {
+    background-color: #274646;
+    height: 50px;
+    border-radius: 46px;
+    display: flex;
+    align-items: center;
+    z-index: 1;
+    font-family: "ValueSansPro";
+    font-weight: 500;
+    color: #fff;
+    margin: 1rem;
+    gap: 8px;
+}
+
+.mobile_cart a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    padding-left: 1rem;
+}
+
+.mobile_cart_cost_label {
+    display: flex;
+    margin-left: auto;
+    padding-right: 1rem;
 }
 
 .stories{
@@ -166,6 +205,7 @@
     display: flex;
     gap: 8px;
     height: 24px;
+    
 }
 
 .catalog_grid_cald_types img{
@@ -173,11 +213,13 @@
     height: 24px;
 }
 
+
 .catalog_grid_card_types-spicy img:last-child {
     display: none;  
 }
   .catalog_grid_card_types-spicy:hover img:last-child {
     display: block;  
+    cursor: pointer;
 }
   .catalog_grid_card_types-spicy:hover img:first-child {
     display: none;  
@@ -188,6 +230,7 @@
 }
   .catalog_grid_card_types-hot:hover img:last-child {
     display: block;  
+    cursor: pointer;
 }
   .catalog_grid_card_types-hot:hover img:first-child {
     display: none;  
@@ -198,6 +241,7 @@
 }
   .catalog_grid_card_types-vegan:hover img:last-child {
     display: block;  
+    cursor: pointer;
 }
   .catalog_grid_card_types-vegan:hover img:first-child {
     display: none;  
@@ -239,6 +283,7 @@
     font-size: 14px;
     font-family: "ValueSansPro";
     cursor: pointer;
+    transition: all .2s ease;
 }
 .catalog_grid_card_cost-button:hover {
     background-color:$green-color;

@@ -9,112 +9,241 @@
 </head>
 <body>
         <header class="header">
-            <div class="head">
-                <div class="container">
+            <div class="head" id="header_stripe">
+                <div class="container" id="container">
                     <div class="container-header">
                         <div class="left-header">
-                            <div class="menu-button" onclick="">
-                                <img src="images/menu-logo.png" alt="Site Name"/>
+                            <div class="menu-button"  id="menuButton">
+                                <img src="images/menu-logo.svg" alt="Menu" id="menuButtonImage"/>
                             </div>
                             <div class="logo">
-                                <a href="#"><img src="images/logo.png" alt="Site Name" /></a>
+                                <a href="#"><img src="images/logo.svg" alt="Site Name" id="bigLogo"/></a>
                             </div>
                             <div class="mobile_logo">
-                                <a href="#"><img src="images/mobile-logo.png" alt="Site logo" /></a>
+                                <a href="#"><img src="images/mobile-logo.svg" alt="Site logo" id="mobileLogo"/></a>
                             </div>
-                            <div class="telephone-number">
+                            <div class="telephone-number" id="telephone">
                                 <a href="tel:+78127171919"> +7 812 717-19-19 </a>
                             </div>
                             <div class="geolocation">
-                                <a href="#"><img src="images/location-add.png"/><div class="address-label">Укажите адрес</div></a>
+                                <a href="#"><img src="images/location-add.svg" id="geo-image"/><div class="address-label" id="geo-label">Укажите адрес</div></a>
                             </div>
                         </div>
                         <div class="right-header">
                             <div class="shimings">
-                                <a href="#"><img src="images/shimings-image.png"/><div class="shimings-label">Шиминги</div></a>
+                                <a href="#"><img src="images/shimings-image.svg" id="shim-image"/><div class="shimings-label" id="shim-label">Шиминги</div></a>
                             </div>
                             <div class="cart">
-                                <a href="#"><img src="images/shopping-bag.png"/><div class="cart-label">12</div></a>
-                                <div class="cart-cost">
-                                    2 586 ₽
+                                <a href="#showCart" id="cart-label"><img src="images/shopping-bag.svg" class="cart-image"/><div class="cart-label">0</div></a>
+                                <div class="cart-cost" id="cost-label">
+                                    0
                                 </div>
+                                <span id="cart_ruble-symbol">₽</span>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
+            <div class="content_menu" id="menu">
+                <div class="content_menu_mobile_stripe">
+                    <label class="mobile_button" for="toggle" id="mobile_menu_button">
+                        <img src="images/arrow-active.svg" id="mobile-button-image"/>
+                        <span class="content_menu_mobile_title" id="mobile-button-text">меню</span>
+                    </label>
+                </div>
+                    <div class="content_menu-tmp">
+                        <input id="toggle" type="checkbox" checked style="display:none"/>
+                        <div class="mobile_nav">
+                            <div class="content_menu_left_container" id="contentMenu">
+                                <nav class="content_menu_left_nav topnav">
+                                     <!--NAV ITEMS-->
+                                </nav>
+                            </div>
+                        </div>
+                        <div class="content_menu_right_wrapper">
+                            <div class="content_menu_right">
+                                <div class="menu_info footer_info">
+                                    <nav class="footer_info_nav">
+                                        <a href="#" class="footer_info_nav_item nav-button nav-size-sm">
+                                            <span class="nav-button-content-wrapper">
+                                                <span class="nav-button-text">вход</span>
+                                                <span class="nav-button-icon nav-align-icon-right">
+                                                    -
+                                                </span>
+                                            </span>
+                                        </a>
+                                        <a href="#" class="footer_info_nav_item nav-button nav-size-sm">
+                                            <span class="nav-button-content-wrapper">
+                                                <span class="nav-button-text">доставка</span>
+                                                <span class="nav-button-icon nav-align-icon-right">
+                                                    -
+                                                </span>
+                                            </span>
+                                        </a>
+                                        <a href="#" class="footer_info_nav_item nav-button nav-size-sm">
+                                            <span class="nav-button-content-wrapper">
+                                                <span class="nav-button-text">акции</span>
+                                                <span class="nav-button-icon nav-align-icon-right">
+                                                    -
+                                                </span>
+                                            </span>
+                                        </a>
+                                        <a href="#" class="footer_info_nav_item nav-button nav-size-sm">
+                                            <span class="nav-button-content-wrapper">
+                                                <span class="nav-button-text">отзывы</span>
+                                                <span class="nav-button-icon nav-align-icon-right">
+                                                    -
+                                                </span>
+                                            </span>
+                                        </a>
+                                        <a href="#" class="footer_info_nav_item nav-button nav-size-sm">
+                                            <span class="nav-button-content-wrapper">
+                                                <span class="nav-button-text">связаться с нами</span>
+                                                <span class="nav-button-icon nav-align-icon-right">
+                                                    -
+                                                </span>
+                                            </span>
+                                        </a>
+                                        <a href="#" class="footer_info_nav_item nav-button nav-size-sm">
+                                            <span class="nav-button-content-wrapper">
+                                                <span class="nav-button-text">о нас</span>
+                                                <span class="nav-button-icon nav-align-icon-right">
+                                                    -
+                                                </span>
+                                            </span>
+                                        </a>
+                                        <a href="#" class="footer_info_nav_item nav-button nav-size-sm">
+                                            <span class="nav-button-content-wrapper">
+                                                <span class="nav-button-text">вакансии</span>
+                                                <span class="nav-button-icon nav-align-icon-right">
+                                                    -
+                                                </span>
+                                            </span>
+                                        </a>
+                                    </nav>
+                                    <hr class="footer_info_line">
+                                    <div class="footer_info_logo">
+                                        <a href="#"><img src="images/mobile-logo.png" alt="Site logo"></a>
+                                    </div>
+                                    <div class="footer_info_mobile_logo">
+                                        <a href="#"><img src="images/logo.png" alt="Site logo"></a>
+                                    </div>
+                                    <div class="footer_info_socialmedia">
+                                        <a href="#" class="footer_info_social_media_icons">
+                                            <img src="images/Instagram.svg" alt="Instagram">
+                                            <img src="images/Instagram_hover.svg" alt="Instagram">
+                                        </a>
+                                        <a href="#" class="footer_info_social_media_icons">
+                                            <img src="images/WhatsApp.svg" alt="WhatsApp">
+                                            <img src="images/WhatsApp_hover.svg" alt="WhatsApp">
+                                        </a>
+                                        <a href="#" class="footer_info_social_media_icons">
+                                            <img src="images/Telegram.svg" alt="Telegram">
+                                            <img src="images/Telegram_hover.svg" alt="Telegram">
+                                        </a>
+                                        <a href="#" class="footer_info_social_media_icons">
+                                            <img src="images/VK_.svg" alt="VK">
+                                            <img src="images/VK_hover.svg" alt="VK">
+                                        </a>
+                                    </div>   
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+            </div>
             <div class="container">
-            <nav class="topnav">
-                <a href="#new">Новинки</a>
-                <a href="#rolls">Роллы</a>
-                <a href="#sushi">Суши</a>
-                <a href="#decerts">Десерты</a>
-                <a href="#zakuski">Закуски</a>
-                <a href="#sets">Наборы</a>
-                <a href="#pokeandbowl">Поке и боулы</a>
-                <a href="#wok">Воки</a>
-                <a href="#authors">Авторское</a>
-                <a href="#onigiri">Онигири</a>
-                <a href="#toppings">Топпинги</a>
-            </nav>
-        </div>
-        <div class="container">
-            <nav class="recent-bar">
-                <a href="#classic" class="active">классические</a>
-                <a href="#fried">опалённые</a>
-                <a href="#baked">запечённые</a>
-                <a href="#mini">мини</a>
-                <a href="#tempura">темпура</a>
-            </nav>
-        </div>
+                <div class="header_top">
+                    <div class="header_cart" id="cart">
+                        <table class="flex-table flex-fixhead-table">
+                            <thead>
+                                <tr>
+                                    <th>Наименование</th>
+                                    <th>Кол-во</th>
+                                    <th>Цена</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                
+                            </tbody>
+                        </table>
+                        <div class="header_cart_clear_button_wrapper">
+                            <button class="header_cart_clear_button">Очистить корзину</button>
+                        </div>
+                    </div>
+                </div>
+                <nav class="topnav">
+                    <!--Nav Items -->
+                </nav>
+            </div>
+            <div class="container">
+                <nav class="recent-bar">
+                    <a href="#classic" class="active">классические</a>
+                    <a href="#fried">опалённые</a>
+                    <a href="#baked">запечённые</a>
+                    <a href="#mini">мини</a>
+                    <a href="#tempura">темпура</a>
+                </nav>
+            </div>
         </header>
         <main class="content">
+            <div class="mobile_cart_wrapper">
+                <div class="mobile_cart" id="mobile-cart">
+                    <a href="#showCart" id="cart-label"><img class="cart-image" src="images/shopping-bag.svg" id="shop-bag-image"/><div class="cart-label">0</div></a>
+                    <span>Корзина</span> 
+                    <div class="mobile_cart_cost_label">
+                        <div class="cart-cost" id="cost-label">
+                            0
+                        </div>
+                        <span id="cart_ruble-symbol">&nbsp;₽</span>
+                    </div>
+                </div>
+            </div>
             <div class="container">
-                <div class="stories">
-                    <div class="story">
+                <div class="stories" id="stories-element">
+                    <div class="story" id="story-element">
                         <a href="#"><img src="images/story-image.svg" alt="Story"/></a>
                     </div>
-                    <div class="story">
+                    <div class="story" id="story-element">
                         <a href="#"><img src="images/story-image.svg" alt="Story"/></a>
                     </div>
-                    <div class="story">
+                    <div class="story" id="story-element">
                         <a href="#"><img src="images/story-image.svg" alt="Story"/></a>
                     </div>
-                    <div class="story">
+                    <div class="story" id="story-element">
                         <a href="#"><img src="images/story-image.svg" alt="Story"/></a>
                     </div>
-                    <div class="story">
+                    <div class="story" id="story-element">
                         <a href="#"><img src="images/story-image.svg" alt="Story"/></a>
                     </div>
-                    <div class="story">
+                    <div class="story" id="story-element">
                         <a href="#"><img src="images/story-image.svg" alt="Story"/></a>
                     </div>
-                    <div class="story">
+                    <div class="story" id="story-element">
                         <a href="#"><img src="images/story-image.svg" alt="Story"/></a>
                     </div>
-                    <div class="story">
+                    <div class="story" id="story-element">
                         <a href="#"><img src="images/story-image.svg" alt="Story"/></a>
                     </div>
                 </div>
             </div>
             <div class="stripe rolls-stripe" id="rolls">
                 <div class="stripe_text_rolls stripe-text1">
-                    <a>Роллы</a>
+                    <span>РОЛЛЫ</span>
                 </div>
                 <div class="stripe_text_rolls stripe-text2">
-                    <a>Роллы</a>
+                    <span>РОЛЛЫ</span>
                 </div>
                 <div class="stripe_text_rolls stripe-text3">
-                    <a>Роллы</a>
+                    <span>РОЛЛЫ</span>
                 </div>
                 <div class="stripe_text_rolls stripe-text4">
-                    <a>Роллы</a>
+                    <span>РОЛЛЫ</span>
                 </div>
                 <div class="stripe_text_rolls stripe-text5">
-                    <a>Роллы</a>
+                    <span>РОЛЛЫ</span>
                 </div>
                 <div class="stripe_text_rolls stripe-text6">
-                    <a>Роллы</a>
+                    <span>РОЛЛЫ</span>
                 </div>
             </div>
             <div class="container">
@@ -123,333 +252,29 @@
                         классические
                     </h2>
                     <div class="catalog_grid">
-
-                        <div class="catalog_grid_card">
-                            <div class="catalog_grid_card_images">
-                                <div class="catalog_grid_cald_types">
-                                    <div class="catalog_grid_card_types-spicy">
-                                        <img src="images/Spicy.svg" class="spicy-image" alt="Spicy"/>
-                                        <img src="images/spicy_hover.svg" class="spicy-image_hover" alt="Spicy"/>
-                                    </div>
-                                    <div class="catalog_grid_card_types-hot">
-                                        <img src="images/Hot.svg" class="hot-image" alt="Hot"/>
-                                        <img src="images/hot_hover.svg" class="hot-image_hover" alt="Hot"/>
-                                    </div>
-                                    <div class="catalog_grid_card_types-vegan">
-                                        <img src="images/Vegan.svg" class="vegan-image" alt="Vegan"/>
-                                        <img src="images/vegan_hover.svg" class="vegan-image_hover" alt="Vegan"/>
-                                    </div>  
-                                </div>
-                                <div class="catalog_grid_card_image">
-                                    <img src="images/roll.svg" alt="Roll"/>
-                                </div>
-                            </div>
-                            <div class="catalog_grid_card_information">
-                                <div class="catalog_grid_card_information_title">
-                                    <div class="catalog_grid_card_name">
-                                        Филадельфия люкс
-                                    </div>
-                                    <div class="catalog_grid_card_count">
-                                        8 шт./350 гр.
-                                    </div>
-                                </div>
-                                <div class="catalog_grid_card_cost">
-                                    <div class="catalog_grid_card_cost-old">
-                                        <del>10 000 ₽</del>
-                                    </div>
-                                    <button class="catalog_grid_card_cost-button">1 925 ₽</button>
-                                </div>
-                            </div>
-                        </div>
-                        <hr class="catalog_grid_border">
-                        <div class="catalog_grid_card">
-                            <div class="catalog_grid_card_images">
-                                <div class="catalog_grid_cald_types">
-                                    <div class="catalog_grid_card_types-spicy">
-                                        <img src="images/Spicy.svg" class="spicy-image" alt="Spicy"/>
-                                        <img src="images/spicy_hover.svg" class="spicy-image_hover" alt="Spicy"/>
-                                    </div>
-                                    <div class="catalog_grid_card_types-hot">
-                                        <img src="images/Hot.svg" class="hot-image" alt="Hot"/>
-                                        <img src="images/hot_hover.svg" class="hot-image_hover" alt="Hot"/>
-                                    </div>
-                                    <div class="catalog_grid_card_types-vegan">
-                                        <img src="images/Vegan.svg" class="vegan-image" alt="Vegan"/>
-                                        <img src="images/vegan_hover.svg" class="vegan-image_hover" alt="Vegan"/>
-                                    </div>  
-                                </div>
-                                <div class="catalog_grid_card_image">
-                                    <img src="images/roll.svg" alt="Roll"/>
-                                </div>
-                            </div>
-                            <div class="catalog_grid_card_information">
-                                <div class="catalog_grid_card_information_title">
-                                    <div class="catalog_grid_card_name">
-                                        Филадельфия люкс
-                                    </div>
-                                    <div class="catalog_grid_card_count">
-                                        8 шт./350 гр.
-                                    </div>
-                                </div>
-                                <div class="catalog_grid_card_cost">
-                                    <div class="catalog_grid_card_cost-old">
-                                        <del>10 000 ₽</del>
-                                    </div>
-                                    <button class="catalog_grid_card_cost-button">1 925 ₽</button>
-                                </div>
-                            </div>
-                        </div>
-                        <hr class="catalog_grid_border">
-                        <div class="catalog_grid_card">
-                            <div class="catalog_grid_card_images">
-                                <div class="catalog_grid_cald_types">
-                                    <div class="catalog_grid_card_types-spicy">
-                                        <img src="images/Spicy.svg" class="spicy-image" alt="Spicy"/>
-                                        <img src="images/spicy_hover.svg" class="spicy-image_hover" alt="Spicy"/>
-                                    </div>
-                                    <div class="catalog_grid_card_types-hot">
-                                        <img src="images/Hot.svg" class="hot-image" alt="Hot"/>
-                                        <img src="images/hot_hover.svg" class="hot-image_hover" alt="Hot"/>
-                                    </div>
-                                    <div class="catalog_grid_card_types-vegan">
-                                        <img src="images/Vegan.svg" class="vegan-image" alt="Vegan"/>
-                                        <img src="images/vegan_hover.svg" class="vegan-image_hover" alt="Vegan"/>
-                                    </div>  
-                                </div>
-                                <div class="catalog_grid_card_image">
-                                    <img src="images/roll.svg" alt="Roll"/>
-                                </div>
-                            </div>
-                            <div class="catalog_grid_card_information">
-                                <div class="catalog_grid_card_information_title">
-                                    <div class="catalog_grid_card_name">
-                                        Филадельфия люкс
-                                    </div>
-                                    <div class="catalog_grid_card_count">
-                                        8 шт./350 гр.
-                                    </div>
-                                </div>
-                                <div class="catalog_grid_card_cost">
-                                    <div class="catalog_grid_card_cost-old">
-                                        <del>10 000 ₽</del>
-                                    </div>
-                                    <button class="catalog_grid_card_cost-button">1 925 ₽</button>
-                                </div>
-                            </div>
-                        </div>
-                        <hr class="catalog_grid_border">
-                        <div class="catalog_grid_card">
-                            <div class="catalog_grid_card_images">
-                                <div class="catalog_grid_cald_types">
-                                    <div class="catalog_grid_card_types-spicy">
-                                        <img src="images/Spicy.svg" class="spicy-image" alt="Spicy"/>
-                                        <img src="images/spicy_hover.svg" class="spicy-image_hover" alt="Spicy"/>
-                                    </div>
-                                    <div class="catalog_grid_card_types-hot">
-                                        <img src="images/Hot.svg" class="hot-image" alt="Hot"/>
-                                        <img src="images/hot_hover.svg" class="hot-image_hover" alt="Hot"/>
-                                    </div>
-                                    <div class="catalog_grid_card_types-vegan">
-                                        <img src="images/Vegan.svg" class="vegan-image" alt="Vegan"/>
-                                        <img src="images/vegan_hover.svg" class="vegan-image_hover" alt="Vegan"/>
-                                    </div>  
-                                </div>
-                                <div class="catalog_grid_card_image">
-                                    <img src="images/roll.svg" alt="Roll"/>
-                                </div>
-                            </div>
-                            <div class="catalog_grid_card_information">
-                                <div class="catalog_grid_card_information_title">
-                                    <div class="catalog_grid_card_name">
-                                        Филадельфия люкс
-                                    </div>
-                                    <div class="catalog_grid_card_count">
-                                        8 шт./350 гр.
-                                    </div>
-                                </div>
-                                <div class="catalog_grid_card_cost">
-                                    <div class="catalog_grid_card_cost-old">
-                                        <del>10 000 ₽</del>
-                                    </div>
-                                    <button class="catalog_grid_card_cost-button">1 925 ₽</button>
-                                </div>
-                            </div>
-                        </div>
-                        <hr class="catalog_grid_border">
-                        <div class="catalog_grid_card">
-                            <div class="catalog_grid_card_images">
-                                <div class="catalog_grid_cald_types">
-                                    <div class="catalog_grid_card_types-spicy">
-                                        <img src="images/Spicy.svg" class="spicy-image" alt="Spicy"/>
-                                        <img src="images/spicy_hover.svg" class="spicy-image_hover" alt="Spicy"/>
-                                    </div>
-                                    <div class="catalog_grid_card_types-hot">
-                                        <img src="images/Hot.svg" class="hot-image" alt="Hot"/>
-                                        <img src="images/hot_hover.svg" class="hot-image_hover" alt="Hot"/>
-                                    </div>
-                                    <div class="catalog_grid_card_types-vegan">
-                                        <img src="images/Vegan.svg" class="vegan-image" alt="Vegan"/>
-                                        <img src="images/vegan_hover.svg" class="vegan-image_hover" alt="Vegan"/>
-                                    </div>  
-                                </div>
-                                <div class="catalog_grid_card_image">
-                                    <img src="images/roll.svg" alt="Roll"/>
-                                </div>
-                            </div>
-                            <div class="catalog_grid_card_information">
-                                <div class="catalog_grid_card_information_title">
-                                    <div class="catalog_grid_card_name">
-                                        Филадельфия люкс
-                                    </div>
-                                    <div class="catalog_grid_card_count">
-                                        8 шт./350 гр.
-                                    </div>
-                                </div>
-                                <div class="catalog_grid_card_cost">
-                                    <div class="catalog_grid_card_cost-old">
-                                        <del>10 000 ₽</del>
-                                    </div>
-                                    <button class="catalog_grid_card_cost-button">1 925 ₽</button>
-                                </div>
-                            </div>
-                        </div>
-                        <hr class="catalog_grid_border">
-                        <div class="catalog_grid_card">
-                            <div class="catalog_grid_card_images">
-                                <div class="catalog_grid_cald_types">
-                                    <div class="catalog_grid_card_types-spicy">
-                                        <img src="images/Spicy.svg" class="spicy-image" alt="Spicy"/>
-                                        <img src="images/spicy_hover.svg" class="spicy-image_hover" alt="Spicy"/>
-                                    </div>
-                                    <div class="catalog_grid_card_types-hot">
-                                        <img src="images/Hot.svg" class="hot-image" alt="Hot"/>
-                                        <img src="images/hot_hover.svg" class="hot-image_hover" alt="Hot"/>
-                                    </div>
-                                    <div class="catalog_grid_card_types-vegan">
-                                        <img src="images/Vegan.svg" class="vegan-image" alt="Vegan"/>
-                                        <img src="images/vegan_hover.svg" class="vegan-image_hover" alt="Vegan"/>
-                                    </div>  
-                                </div>
-                                <div class="catalog_grid_card_image">
-                                    <img src="images/roll.svg" alt="Roll"/>
-                                </div>
-                            </div>
-                            <div class="catalog_grid_card_information">
-                                <div class="catalog_grid_card_information_title">
-                                    <div class="catalog_grid_card_name">
-                                        Филадельфия люкс
-                                    </div>
-                                    <div class="catalog_grid_card_count">
-                                        8 шт./350 гр.
-                                    </div>
-                                </div>
-                                <div class="catalog_grid_card_cost">
-                                    <div class="catalog_grid_card_cost-old">
-                                        <del>10 000 ₽</del>
-                                    </div>
-                                    <button class="catalog_grid_card_cost-button">1 925 ₽</button>
-                                </div>
-                            </div>
-                        </div>
-                        <hr class="catalog_grid_border">
-                        <div class="catalog_grid_card">
-                            <div class="catalog_grid_card_images">
-                                <div class="catalog_grid_cald_types">
-                                    <div class="catalog_grid_card_types-spicy">
-                                        <img src="images/Spicy.svg" class="spicy-image" alt="Spicy"/>
-                                        <img src="images/spicy_hover.svg" class="spicy-image_hover" alt="Spicy"/>
-                                    </div>
-                                    <div class="catalog_grid_card_types-hot">
-                                        <img src="images/Hot.svg" class="hot-image" alt="Hot"/>
-                                        <img src="images/hot_hover.svg" class="hot-image_hover" alt="Hot"/>
-                                    </div>
-                                    <div class="catalog_grid_card_types-vegan">
-                                        <img src="images/Vegan.svg" class="vegan-image" alt="Vegan"/>
-                                        <img src="images/vegan_hover.svg" class="vegan-image_hover" alt="Vegan"/>
-                                    </div>  
-                                </div>
-                                <div class="catalog_grid_card_image">
-                                    <img src="images/roll.svg" alt="Roll"/>
-                                </div>
-                            </div>
-                            <div class="catalog_grid_card_information">
-                                <div class="catalog_grid_card_information_title">
-                                    <div class="catalog_grid_card_name">
-                                        Филадельфия люкс
-                                    </div>
-                                    <div class="catalog_grid_card_count">
-                                        8 шт./350 гр.
-                                    </div>
-                                </div>
-                                <div class="catalog_grid_card_cost">
-                                    <div class="catalog_grid_card_cost-old">
-                                        <del>10 000 ₽</del>
-                                    </div>
-                                    <button class="catalog_grid_card_cost-button">1 925 ₽</button>
-                                </div>
-                            </div>
-                        </div>
-                        <hr class="catalog_grid_border">
-                        <div class="catalog_grid_card">
-                            <div class="catalog_grid_card_images">
-                                <div class="catalog_grid_cald_types">
-                                    <div class="catalog_grid_card_types-spicy">
-                                        <img src="images/Spicy.svg" class="spicy-image" alt="Spicy"/>
-                                        <img src="images/spicy_hover.svg" class="spicy-image_hover" alt="Spicy"/>
-                                    </div>
-                                    <div class="catalog_grid_card_types-hot">
-                                        <img src="images/Hot.svg" class="hot-image" alt="Hot"/>
-                                        <img src="images/hot_hover.svg" class="hot-image_hover" alt="Hot"/>
-                                    </div>
-                                    <div class="catalog_grid_card_types-vegan">
-                                        <img src="images/Vegan.svg" class="vegan-image" alt="Vegan"/>
-                                        <img src="images/vegan_hover.svg" class="vegan-image_hover" alt="Vegan"/>
-                                    </div>  
-                                </div>
-                                <div class="catalog_grid_card_image">
-                                    <img src="images/roll.svg" alt="Roll"/>
-                                </div>
-                            </div>
-                            <div class="catalog_grid_card_information">
-                                <div class="catalog_grid_card_information_title">
-                                    <div class="catalog_grid_card_name">
-                                        Филадельфия люкс
-                                    </div>
-                                    <div class="catalog_grid_card_count">
-                                        8 шт./350 гр.
-                                    </div>
-                                </div>
-                                <div class="catalog_grid_card_cost">
-                                    <div class="catalog_grid_card_cost-old">
-                                        <del>10 000 ₽</del>
-                                    </div>
-                                    <button class="catalog_grid_card_cost-button">1 925 ₽</button>
-                                </div>
-                            </div>
-                        </div>
-                        <hr class="catalog_grid_border">
+                        <!--CARDS-->
                     </div>    
                 </section>
             </div>
 
             <div class="stripe sushi-stripe" id="sushi">
                 <div class="stripe_text_sushi stripe-text1">
-                    <a>Суши</a>
+                    <span>СУШИ</span>
                 </div>
                 <div class="stripe_text_sushi stripe-text2">
-                    <a>Суши</a>
+                    <span>СУШИ</span>
                 </div>
                 <div class="stripe_text_sushi stripe-text3">
-                    <a>Суши</a>
+                    <span>СУШИ</span>
                 </div>
                 <div class="stripe_text_sushi stripe-text4">
-                    <a>Суши</a>
+                    <span>СУШИ</span>
                 </div>
                 <div class="stripe_text_sushi stripe-text5">
-                    <a>Суши</a>
+                    <span>СУШИ</span>
                 </div>
                 <div class="stripe_text_sushi stripe-text6">
-                    <a>Суши</a>
+                    <span>СУШИ</span>
                 </div>
             </div>
             <div class="container">
@@ -458,7 +283,6 @@
                         классические
                     </h2>
                     <div class="catalog_grid">
-
                         <div class="catalog_grid_card">
                             <div class="catalog_grid_card_images">
                                 <div class="catalog_grid_cald_types">
@@ -767,15 +591,15 @@
                 </section>
             </div>
 
-            <div class="stripe pokebol-stripe">
+            <div class="stripe pokebol-stripe" id="pokebouls">
                 <div class="stripe_text_pokebol stripe-text1">
-                    <a>Поке и боулы</a>
+                    <span>ПОКЕ И БОУЛЫ</span>
                 </div>
                 <div class="stripe_text_pokebol stripe-text2">
-                    <a>Поке и боулы</a>
+                    <span>ПОКЕ И БОУЛЫ</span>
                 </div>
                 <div class="stripe_text_pokebol stripe-text3">
-                    <a>Поке и боулы</a>
+                    <span>ПОКЕ И БОУЛЫ</span>
                 </div>
             </div>
             <div class="container">
@@ -1096,36 +920,64 @@
         <footer>
             <div class="footer_info">
                 <nav class="footer_info_nav">
-                    <div class="footer_info_nav_item">
-                        <a href="#signin">вход</a>
-                        <hr>
-                    </div>  
-                    <div class="footer_info_nav_item">
-                        <a href="#delivery">доставка</a>
-                        <hr>
-                    </div>  
-                    <div class="footer_info_nav_item">
-                        <a href="#">акции</a>
-                        <hr>
-                    </div>  
-                    <div class="footer_info_nav_item">
-                        <a href="#">отзывы</a>
-                        <hr>
-                    </div>  
-                    <div class="footer_info_nav_item">
-                        <a href="#contactus">связаться с нами</a>
-                        <hr>
-                    </div>  
-                    <div class="footer_info_nav_item">
-                        <a href="#about-us">о нас</a>
-                        <hr>
-                    </div>  
-                    <div class="footer_info_nav_item">
-                        <a href="#job">вакансии</a>
-                        <hr>
-                    </div> 
+                    <a href="#" class="footer_info_nav_item nav-button nav-size-sm">
+                        <span class="nav-button-content-wrapper">
+                            <span class="nav-button-text">вход</span>
+                            <span class="nav-button-icon nav-align-icon-right">
+                                -
+                            </span>
+                        </span>
+                    </a>
+                    <a href="#" class="footer_info_nav_item nav-button nav-size-sm">
+                        <span class="nav-button-content-wrapper">
+                            <span class="nav-button-text">доставка</span>
+                            <span class="nav-button-icon nav-align-icon-right">
+                                -
+                            </span>
+                        </span>
+                    </a>
+                    <a href="#" class="footer_info_nav_item nav-button nav-size-sm">
+                        <span class="nav-button-content-wrapper">
+                            <span class="nav-button-text">акции</span>
+                            <span class="nav-button-icon nav-align-icon-right">
+                                -
+                            </span>
+                        </span>
+                    </a>
+                    <a href="#" class="footer_info_nav_item nav-button nav-size-sm">
+                        <span class="nav-button-content-wrapper">
+                            <span class="nav-button-text">отзывы</span>
+                            <span class="nav-button-icon nav-align-icon-right">
+                                -
+                            </span>
+                        </span>
+                    </a>
+                    <a href="#" class="footer_info_nav_item nav-button nav-size-sm">
+                        <span class="nav-button-content-wrapper">
+                            <span class="nav-button-text">связаться с нами</span>
+                            <span class="nav-button-icon nav-align-icon-right">
+                                -
+                            </span>
+                        </span>
+                    </a>
+                    <a href="#" class="footer_info_nav_item nav-button nav-size-sm">
+                        <span class="nav-button-content-wrapper">
+                            <span class="nav-button-text">о нас</span>
+                            <span class="nav-button-icon nav-align-icon-right">
+                                -
+                            </span>
+                        </span>
+                    </a>
+                    <a href="#" class="footer_info_nav_item nav-button nav-size-sm">
+                        <span class="nav-button-content-wrapper">
+                            <span class="nav-button-text">вакансии</span>
+                            <span class="nav-button-icon nav-align-icon-right">
+                                -
+                            </span>
+                        </span>
+                    </a>
                 </nav>
-                <hr>
+                <hr class="footer_info_line">
                 <div class="footer_info_logo">
                     <a href="#"><img src="images/mobile-logo.png" alt="Site logo"></a>
                 </div>
@@ -1154,22 +1006,22 @@
             <div class="footer_about">
                 <div class="footer_about_left">
                     <div class="footer_about_left_container">
-                        <a>Шимийо © 2022</a>
+                        <span>Шимийо © 2022</span>
                         <a href="#private">Политика конфиденциальности</a>
                         <a href="#policy">Пользовательское соглашение</a>
                     </div>
                 </div>
                 <div class="footer_about_right">
                     <div class="footer_about_right_text">
-                        <a class="footer_about_right_text_white">Наш&nbsp;</a>
-                        <a class="footer_about_right_text_yellow">надежный&nbsp;digital</a>
-                        <a class="footer_about_right_text_white">-</a>
-                        <a class="footer_about_right_text_yellow">партнер:</a>
+                        <span class="footer_about_right_text_white">Наш&nbsp;</span>
+                        <span class="footer_about_right_text_yellow">надежный&nbsp;digital</span>
+                        <span class="footer_about_right_text_white">-</span>
+                        <span class="footer_about_right_text_yellow">партнер:</span>
                     </div>
                     <a target="_blank" rel="noopener noreferrer"  href="https://sunweb.pro/"><img src="images/LogoSunweb.svg" alt="Sunweb"></a>
                 </div>
             </div>
         </footer>
-    <script src="scripts/main.min.js"></script>
+        <script src="scripts/main.min.js"></script>
 </body>
 </html>
