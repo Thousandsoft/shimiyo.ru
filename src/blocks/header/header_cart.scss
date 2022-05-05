@@ -1,7 +1,7 @@
 .header_cart{
     display: none;
     position: absolute;
-    width: 300px;
+    width: 400px;
     background-color: white; 
     right: 0;
     color: $green-color;
@@ -64,6 +64,8 @@
     flex-direction: column;
     height: 100%;
 }
+
+
 .flex-table thead {
     color: $pink-color;
     background: $green-color;
@@ -72,26 +74,59 @@
 .flex-table tbody tr {
     display: flex;
     width: 100%;
-    padding: .5em;
+    padding-top: 8px;
 }
-.flex-table thead tr th,
+
 .flex-table tbody tr td {
     
-    width: 100px;
+}
+
+.flex-table tbody button{
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    background: $green-color;
+    color: white;
+    cursor: pointer;
+    border-radius: 50%;
+    transition: all .2s ease;
+}
+
+.flex-table tbody button:hover{
+    background:  white;;
+    color: $green-color;
+}
+
+
+
+.flex-table thead tr{
+    display: flex;
+    width: 100%;
+    padding: .5em;
+}
+
+.flex-table thead th{
+    margin: auto;
 }
 
 .cart-quantity  {
     text-align: center;
-    
+    margin-left: auto;
+}
+
+.cart-quantity span{
+    padding-left: 8px;
+    padding-right: 8px;
 }
 
 .cart-table-price {
     text-align: center;
-    
+    margin-left: 20%;
 }
 
 .flex-fixhead-table tbody {
-    
+    padding-left: 1rem;
+    padding-right: 1rem;
     height: 50vh;
 }
 
